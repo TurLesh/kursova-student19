@@ -4290,6 +4290,34 @@ const VerticalCheck: FC = () => {
     const isEven20x4 = numberOfCoincidences20x4 % 2 === 0;
     const resultText20x4 = isEven20x4 ? '0' : '1';
 
+    const getMatrixFromHorizontal = () => {
+        //matrix rows
+        const matrix1Str = localStorage.getItem('matrix1Arr');
+        const matrix2Str = localStorage.getItem('matrix2Arr');
+        const matrix3Str = localStorage.getItem('matrix3Arr');
+        const matrix4Str = localStorage.getItem('matrix4Arr');
+        const matrix5Str = localStorage.getItem('matrix5Arr');
+        const matrix6Str = localStorage.getItem('matrix6Arr');
+        const matrix7Str = localStorage.getItem('matrix7Arr');
+        const matrix8Str = localStorage.getItem('matrix8Arr');
+        const matrix9Str = localStorage.getItem('matrix9Arr');
+
+        console.log('matrix1Str: ', matrix1Str);
+        console.log('matrix2Str: ', matrix2Str);
+        console.log('matrix3Str: ', matrix3Str);
+        console.log('matrix4Str: ', matrix4Str);
+        console.log('matrix5Str: ', matrix5Str);
+        console.log('matrix6Str: ', matrix6Str);
+        console.log('matrix7Str: ', matrix7Str);
+        console.log('matrix8Str: ', matrix8Str);
+        console.log('matrix9Str: ', matrix9Str);
+
+        //horizontal check results
+        const horizontalResultRow1Str = localStorage.getItem('horizontalResultRow1');
+
+        console.log('horizontalResultRow1Str', horizontalResultRow1Str);
+    };
+
     return (
         <div className="vertical-check-wrapper">
             <p className="component-title">Vertical Checks</p>
@@ -4733,6 +4761,7 @@ const VerticalCheck: FC = () => {
                     </div>
                 </div>
                 <button onClick={doCheckBtnHandler}>Do vertical check</button>
+                <button onClick={getMatrixFromHorizontal}>Get data from horizonal</button>
             </div>
         </div>
     );

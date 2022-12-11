@@ -2511,7 +2511,7 @@ const HorizontalCheckV2 = () => {
         }
     };
 
-    const doCheckBtnHandler = () => {
+    const doHorisontalCheck = () => {
         setCoincidencesToZero();
 
         let genericColumnsArr = readGeneric();
@@ -2534,6 +2534,25 @@ const HorizontalCheckV2 = () => {
 
         console.log('Generic columns: ', genericColumnsArr);
         console.log('Matrix rows: ', matrixRowsArr);
+
+        //set columns and rows to localstorage
+        //generic
+        // localStorage.setItem('generic1Arr', generic1Arr.join());
+        // localStorage.setItem('generic2Arr', generic2Arr.join());
+        // localStorage.setItem('generic3Arr', generic3Arr.join());
+        // localStorage.setItem('generic4Arr', generic4Arr.join());
+        // localStorage.setItem('generic5Arr', generic5Arr.join());
+
+        //matrix
+        localStorage.setItem('matrix1Arr', matrix1Arr.join());
+        localStorage.setItem('matrix2Arr', matrix2Arr.join());
+        localStorage.setItem('matrix3Arr', matrix3Arr.join());
+        localStorage.setItem('matrix4Arr', matrix4Arr.join());
+        localStorage.setItem('matrix5Arr', matrix5Arr.join());
+        localStorage.setItem('matrix6Arr', matrix6Arr.join());
+        localStorage.setItem('matrix7Arr', matrix7Arr.join());
+        localStorage.setItem('matrix8Arr', matrix8Arr.join());
+        localStorage.setItem('matrix9Arr', matrix9Arr.join());
 
         row1Function(matrix1Arr, generic1Arr, generic2Arr, generic3Arr, generic4Arr, generic5Arr);
         row2Function(matrix2Arr, generic1Arr, generic2Arr, generic3Arr, generic4Arr, generic5Arr);
@@ -3860,6 +3879,33 @@ const HorizontalCheckV2 = () => {
     const isEven9x5 = numberOfCoincidences9x5 % 2 === 0;
     const resultText9x5 = isEven9x5 ? '0' : '1';
 
+    const horizonalResultRow1 = [resultText1x1, resultText1x2, resultText1x3, resultText1x4, resultText1x5];
+    const horizonalResultRow2 = [resultText2x1, resultText2x2, resultText2x3, resultText2x4, resultText2x5];
+    const horizonalResultRow3 = [resultText3x1, resultText3x2, resultText3x3, resultText3x4, resultText3x5];
+    const horizonalResultRow4 = [resultText4x1, resultText4x2, resultText4x3, resultText4x4, resultText4x5];
+    const horizonalResultRow5 = [resultText5x1, resultText5x2, resultText5x3, resultText5x4, resultText5x5];
+    const horizonalResultRow6 = [resultText6x1, resultText6x2, resultText6x3, resultText6x4, resultText6x5];
+    const horizonalResultRow7 = [resultText7x1, resultText7x2, resultText7x3, resultText7x4, resultText7x5];
+    const horizonalResultRow8 = [resultText8x1, resultText8x2, resultText8x3, resultText8x4, resultText8x5];
+    const horizonalResultRow9 = [resultText9x1, resultText9x2, resultText9x3, resultText9x4, resultText9x5];
+
+    const passValuesToLocal = () => {
+        localStorage.setItem('horizontalResultRow1', horizonalResultRow1.join());
+        localStorage.setItem('horizontalResultRow2', horizonalResultRow2.join());
+        localStorage.setItem('horizontalResultRow3', horizonalResultRow3.join());
+        localStorage.setItem('horizontalResultRow4', horizonalResultRow4.join());
+        localStorage.setItem('horizontalResultRow5', horizonalResultRow5.join());
+        localStorage.setItem('horizontalResultRow6', horizonalResultRow6.join());
+        localStorage.setItem('horizontalResultRow7', horizonalResultRow7.join());
+        localStorage.setItem('horizontalResultRow8', horizonalResultRow8.join());
+        localStorage.setItem('horizontalResultRow9', horizonalResultRow9.join());
+    };
+
+    const doHorizontalChecksHandler = () => {
+        doHorisontalCheck();
+        passValuesToLocal();
+    };
+
     return (
         <div className="horizonal-v2-wrapper">
             <p className="component-title">Horizontal Checks</p>
@@ -4272,7 +4318,7 @@ const HorizontalCheckV2 = () => {
                         <input className="textfield-9-20 external" id="text-9-20" name="text-9-20" placeholder={'h-20'} value={resultText9x5} />
                     </div>
                 </div>
-                <button onClick={doCheckBtnHandler}>Do Horizontal Check</button>
+                <button onClick={doHorizontalChecksHandler}>Do Horizontal Check</button>
             </div>
         </div>
     );
