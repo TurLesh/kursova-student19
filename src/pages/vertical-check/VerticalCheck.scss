@@ -1,0 +1,53 @@
+.vertical-check-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .generic-matrix-wrapper {
+        justify-content: center;
+
+        .column-position {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(37, 18, 238);
+        }
+
+        .generic-row {
+            display: flex;
+
+            .row-position {
+                margin-right: 10px;
+                color: rgb(37, 18, 238);
+            }
+        }
+    }
+
+    .matrix-wrapper {
+        margin-top: 20px;
+
+        .column-position {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(37, 18, 238);
+        }
+
+        .matrix-row {
+            display: flex;
+
+            .row-position {
+                margin-right: 10px;
+                color: rgb(37, 18, 238);
+            }
+
+            .matrix-rows {
+                .external {
+                    background-color: rgb(138, 181, 255);
+                }
+
+                .external-v {
+                    background-color: rgb(251, 220, 182);
+                }
+            }
+        }
+    }
+}

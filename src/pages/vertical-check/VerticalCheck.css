@@ -1,0 +1,41 @@
+.vertical-check-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vertical-check-wrapper .generic-matrix-wrapper {
+  justify-content: center;
+}
+.vertical-check-wrapper .generic-matrix-wrapper .column-position {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(37, 18, 238);
+}
+.vertical-check-wrapper .generic-matrix-wrapper .generic-row {
+  display: flex;
+}
+.vertical-check-wrapper .generic-matrix-wrapper .generic-row .row-position {
+  margin-right: 10px;
+  color: rgb(37, 18, 238);
+}
+.vertical-check-wrapper .matrix-wrapper {
+  margin-top: 20px;
+}
+.vertical-check-wrapper .matrix-wrapper .column-position {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(37, 18, 238);
+}
+.vertical-check-wrapper .matrix-wrapper .matrix-row {
+  display: flex;
+}
+.vertical-check-wrapper .matrix-wrapper .matrix-row .row-position {
+  margin-right: 10px;
+  color: rgb(37, 18, 238);
+}
+.vertical-check-wrapper .matrix-wrapper .matrix-row .matrix-rows .external {
+  background-color: rgb(138, 181, 255);
+}
+.vertical-check-wrapper .matrix-wrapper .matrix-row .matrix-rows .external-v {
+  background-color: rgb(251, 220, 182);
+}/*# sourceMappingURL=VerticalCheck.css.map */
