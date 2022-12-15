@@ -1522,6 +1522,309 @@ const Noise = () => {
     const [noise13x19, setNoise13x19] = useState<number>();
     const [noise13x20, setNoise13x20] = useState<number>();
 
+    const passNoiseToLocal = () => {
+        const noiseRow1 = [
+            noise1x1,
+            noise1x2,
+            noise1x3,
+            noise1x4,
+            noise1x5,
+            noise1x6,
+            noise1x7,
+            noise1x8,
+            noise1x9,
+            noise1x10,
+            noise1x11,
+            noise1x12,
+            noise1x13,
+            noise1x14,
+            noise1x15,
+            noise1x16,
+            noise1x17,
+            noise1x18,
+            noise1x19,
+            noise1x20
+        ];
+        const noiseRow2 = [
+            noise2x1,
+            noise2x2,
+            noise2x3,
+            noise2x4,
+            noise2x5,
+            noise2x6,
+            noise2x7,
+            noise2x8,
+            noise2x9,
+            noise2x10,
+            noise2x11,
+            noise2x12,
+            noise2x13,
+            noise2x14,
+            noise2x15,
+            noise2x16,
+            noise2x17,
+            noise2x18,
+            noise2x19,
+            noise2x20
+        ];
+        const noiseRow3 = [
+            noise3x1,
+            noise3x2,
+            noise3x3,
+            noise3x4,
+            noise3x5,
+            noise3x6,
+            noise3x7,
+            noise3x8,
+            noise3x9,
+            noise3x10,
+            noise3x11,
+            noise3x12,
+            noise3x13,
+            noise3x14,
+            noise3x15,
+            noise3x16,
+            noise3x17,
+            noise3x18,
+            noise3x19,
+            noise3x20
+        ];
+        const noiseRow4 = [
+            noise4x1,
+            noise4x2,
+            noise4x3,
+            noise4x4,
+            noise4x5,
+            noise4x6,
+            noise4x7,
+            noise4x8,
+            noise4x9,
+            noise4x10,
+            noise4x11,
+            noise4x12,
+            noise4x13,
+            noise4x14,
+            noise4x15,
+            noise4x16,
+            noise4x17,
+            noise4x18,
+            noise4x19,
+            noise4x20
+        ];
+        const noiseRow5 = [
+            noise5x1,
+            noise5x2,
+            noise5x3,
+            noise5x4,
+            noise5x5,
+            noise5x6,
+            noise5x7,
+            noise5x8,
+            noise5x9,
+            noise5x10,
+            noise5x11,
+            noise5x12,
+            noise5x13,
+            noise5x14,
+            noise5x15,
+            noise5x16,
+            noise5x17,
+            noise5x18,
+            noise5x19,
+            noise5x20
+        ];
+        const noiseRow6 = [
+            noise6x1,
+            noise6x2,
+            noise6x3,
+            noise6x4,
+            noise6x5,
+            noise6x6,
+            noise6x7,
+            noise6x8,
+            noise6x9,
+            noise6x10,
+            noise6x11,
+            noise6x12,
+            noise6x13,
+            noise6x14,
+            noise6x15,
+            noise6x16,
+            noise6x17,
+            noise6x18,
+            noise6x19,
+            noise6x20
+        ];
+        const noiseRow7 = [
+            noise7x1,
+            noise7x2,
+            noise7x3,
+            noise7x4,
+            noise7x5,
+            noise7x6,
+            noise7x7,
+            noise7x8,
+            noise7x9,
+            noise7x10,
+            noise7x11,
+            noise7x12,
+            noise7x13,
+            noise7x14,
+            noise7x15,
+            noise7x16,
+            noise7x17,
+            noise7x18,
+            noise7x19,
+            noise7x20
+        ];
+        const noiseRow8 = [
+            noise8x1,
+            noise8x2,
+            noise8x3,
+            noise8x4,
+            noise8x5,
+            noise8x6,
+            noise8x7,
+            noise8x8,
+            noise8x9,
+            noise8x10,
+            noise8x11,
+            noise8x12,
+            noise8x13,
+            noise8x14,
+            noise8x15,
+            noise8x16,
+            noise8x17,
+            noise8x18,
+            noise8x19,
+            noise8x20
+        ];
+        const noiseRow9 = [
+            noise9x1,
+            noise9x2,
+            noise9x3,
+            noise9x4,
+            noise9x5,
+            noise9x6,
+            noise9x7,
+            noise9x8,
+            noise9x9,
+            noise9x10,
+            noise9x11,
+            noise9x12,
+            noise9x13,
+            noise9x14,
+            noise9x15,
+            noise9x16,
+            noise9x17,
+            noise9x18,
+            noise9x19,
+            noise9x20
+        ];
+        const noiseRow10 = [
+            noise10x1,
+            noise10x2,
+            noise10x3,
+            noise10x4,
+            noise10x5,
+            noise10x6,
+            noise10x7,
+            noise10x8,
+            noise10x9,
+            noise10x10,
+            noise10x11,
+            noise10x12,
+            noise10x13,
+            noise10x14,
+            noise10x15,
+            noise10x16,
+            noise10x17,
+            noise10x18,
+            noise10x19,
+            noise10x20
+        ];
+        const noiseRow11 = [
+            noise11x1,
+            noise11x2,
+            noise11x3,
+            noise11x4,
+            noise11x5,
+            noise11x6,
+            noise11x7,
+            noise11x8,
+            noise11x9,
+            noise11x10,
+            noise11x11,
+            noise11x12,
+            noise11x13,
+            noise11x14,
+            noise11x15,
+            noise11x16,
+            noise11x17,
+            noise11x18,
+            noise11x19,
+            noise11x20
+        ];
+        const noiseRow12 = [
+            noise12x1,
+            noise12x2,
+            noise12x3,
+            noise12x4,
+            noise12x5,
+            noise12x6,
+            noise12x7,
+            noise12x8,
+            noise12x9,
+            noise12x10,
+            noise12x11,
+            noise12x12,
+            noise12x13,
+            noise12x14,
+            noise12x15,
+            noise12x16,
+            noise12x17,
+            noise12x18,
+            noise12x19,
+            noise12x20
+        ];
+        const noiseRow13 = [
+            noise13x1,
+            noise13x2,
+            noise13x3,
+            noise13x4,
+            noise13x5,
+            noise13x6,
+            noise13x7,
+            noise13x8,
+            noise13x9,
+            noise13x10,
+            noise13x11,
+            noise13x12,
+            noise13x13,
+            noise13x14,
+            noise13x15,
+            noise13x16,
+            noise13x17,
+            noise13x18,
+            noise13x19,
+            noise13x20
+        ];
+
+        localStorage.setItem('noiseRow1', noiseRow1.join());
+        localStorage.setItem('noiseRow2', noiseRow2.join());
+        localStorage.setItem('noiseRow3', noiseRow3.join());
+        localStorage.setItem('noiseRow4', noiseRow4.join());
+        localStorage.setItem('noiseRow5', noiseRow5.join());
+        localStorage.setItem('noiseRow6', noiseRow6.join());
+        localStorage.setItem('noiseRow7', noiseRow7.join());
+        localStorage.setItem('noiseRow8', noiseRow8.join());
+        localStorage.setItem('noiseRow9', noiseRow9.join());
+        localStorage.setItem('noiseRow10', noiseRow10.join());
+        localStorage.setItem('noiseRow11', noiseRow11.join());
+        localStorage.setItem('noiseRow12', noiseRow12.join());
+        localStorage.setItem('noiseRow13', noiseRow13.join());
+    };
+
     const simulateNoisePart1 = () => {
         const matrixData = getMatrixData();
 
@@ -6914,6 +7217,7 @@ const Noise = () => {
                 </div>
                 <button onClick={simulateNoise}>Simulate Noise</button>
                 <button onClick={showFliped}>Show Fliped</button>
+                <button onClick={passNoiseToLocal}>Pass results to storage</button>
             </div>
         </div>
     );
