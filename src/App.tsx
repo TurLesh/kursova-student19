@@ -7,6 +7,7 @@ import HorizontalCheckV2 from './pages/horizontal-v2/Horizontal-v2';
 import VerticalCheck from './pages/vertical-check/VerticalCheck';
 import Noise from './pages/noise/Noise';
 import Decode from './pages/decode/Decode';
+import Cycle from './pages/cycle/Cycle';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="vertical-check" element={<VerticalCheck />} />
                 <Route path="noise" element={<Noise />} />
                 <Route path="decode" element={<Decode />} />
+                <Route path="cycle" element={<Cycle />} />
             </Routes>
         </BrowserRouter>
     );

@@ -1,0 +1,73 @@
+.decode-wrapper {
+    .horizontal-matrix-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .row-number {
+            color: rgb(37, 18, 238);
+            background-color: bisque;
+        }
+
+        .horizontal-row {
+            display: flex;
+        }
+
+        .column-numbers {
+            color: rgb(37, 18, 238);
+            background-color: bisque;
+        }
+
+        .column-number {
+            text-align: center;
+            width: 50px;
+            border: 1px solid black;
+        }
+
+        .horizontal-number {
+            text-align: center;
+            width: 50px;
+            border: 1px solid black;
+        }
+
+        .horizontal-checking {
+            background-color: rgb(121, 211, 121);
+        }
+    }
+
+    .decode-matrix-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .decode-row {
+            display: flex;
+
+            .decode-checking {
+                background-color: rgb(138, 181, 255);
+            }
+        }
+        .column-number {
+            text-align: center;
+            width: 50px;
+            border: 1px solid black;
+            color: rgb(37, 18, 238);
+            background-color: bisque;
+        }
+        .decode-number {
+            text-align: center;
+            width: 50px;
+            border: 1px solid black;
+        }
+        .decode-horizontal {
+            background-color: rgb(186, 143, 243);
+        }
+        .decode-vertical {
+            background-color: rgb(255, 192, 4) !important;
+        }
+        .row-number {
+            color: rgb(37, 18, 238);
+            background-color: bisque;
+        }
+    }
+}
