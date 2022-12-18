@@ -14,6 +14,15 @@ const Cycle = () => {
     const [isMatrixReachable, setMatrixReachable] = useState(false);
     const [isVerticalMatrixReachable, setVerticalMatrixReachable] = useState(false);
 
+    // const [isFirstHorizontalDecodeDone, setIsFirstHorizontalDecodeDone] = useState(false);
+    // const [isSyndromHorizontalFound, setIsSyndromHorizontalFound] = useState(false);
+    // const [isSecondHorizontalDecodeDone, setIsSecondHorizontalDecodeDone] = useState(false);
+
+    // const [isVerticalTargetMatrixGot, setIsVerticalTargetMatrixGot] = useState(false);
+    // const [isFirstVerticalDecodeDone, setIsFirstVerticalDecodeDone] = useState(false);
+    // const [isSyndromVerticalFound, setIsSyndromVerticalFound] = useState(false);
+    // const [isSecondVerticalDecodeDone, setIsSecondVerticalDecodeDone] = useState(false);
+
     const readNoiseMatrix = () => {
         const noiseGetRow1Str = localStorage.getItem('noiseRow1');
         const noiseGetRow2Str = localStorage.getItem('noiseRow2');
@@ -28,6 +37,8 @@ const Cycle = () => {
         const noiseGetRow11Str = localStorage.getItem('noiseRow11');
         const noiseGetRow12Str = localStorage.getItem('noiseRow12');
         const noiseGetRow13Str = localStorage.getItem('noiseRow13');
+
+        console.log('CALLED READ NOISE MATRIX');
 
         if (
             noiseGetRow1Str &&
@@ -76,6 +87,10 @@ const Cycle = () => {
         }
     };
 
+    // const callReadNoise = () => {
+    //     readNoiseMatrix();
+    // };
+
     useEffect(() => {
         readNoiseMatrix();
     }, []);
@@ -94,6 +109,7 @@ const Cycle = () => {
 
     const doHorizontalDecode = () => {
         let parityCheckResults = [];
+        // setIsFirstHorizontalDecodeDone(true);
 
         for (let i = 0; i < targetMatrix.length; i++) {
             const targetMatrixRow = targetMatrix[i];
@@ -115,7 +131,7 @@ const Cycle = () => {
             parityCheckResults.push(resultArr);
         }
 
-        // console.log('results array: ', parityCheckResults);
+        console.log('parity results array: ', parityCheckResults);
         setHorizontalDecodeResult(parityCheckResults);
         setMatrixReachable(true);
     };
@@ -159,14 +175,19 @@ const Cycle = () => {
         }
     };
 
+    // const fixOnlyErrors = () => {
+    //     findSyndromFunc(horizontalDecodeResult, horizontalMatrixTransposed);
+    // };
+
     const fixErrorsHorizontal = () => {
         findSyndromFunc(horizontalDecodeResult, horizontalMatrixTransposed);
-        doHorizontalDecode();
     };
 
     const getVerticalTargetMatrix = (targetMatrix: number[][]) => {
-        const result: any = _.zip.apply(_, targetMatrix);
+        const targetCloneForVertical = _.clone(targetMatrix);
+        const result: any = _.zip.apply(_, targetCloneForVertical);
         setVerticalTargetMatrix(result);
+        console.log('vertical target matrix: ', result);
     };
 
     const callVerticalTargetMatrix = () => {
@@ -252,31 +273,135 @@ const Cycle = () => {
 
     const fixErrorsVertical = () => {
         findSyndromFuncVertical(verticalDecodeResult, verticalMatrixTransposed);
-        doVerticalDecode();
+        // doVerticalDecode();
+        // transposeFromVerticalToTarget(verticalTargetMatrix);
     };
 
     const transposeFromVerticalToTarget = (verticalTargetMatrix: number[][]) => {
-        const result: any = _.zip.apply(_, verticalTargetMatrix);
+        const targetCloneForVerticalTranspose = _.clone(verticalTargetMatrix);
+        const result: any = _.zip.apply(_, targetCloneForVerticalTranspose);
         setTargetMatrix(result);
-        console.log('transpose back result', result);
+        // console.log('transpose back result', result);
     };
 
     const callTransposeBack = () => {
         transposeFromVerticalToTarget(verticalTargetMatrix);
     };
 
-    // const writeResult = () => {
-    //     setResult([targetMatrix, horizontalDecodeResult, verticalDecodeResult]);
+    // const final = () => {
+    //     doHorizontalDecode();
+    //     console.log('horizontal first decode called');
+
+    //     if (isFirstHorizontalDecodeDone === true) {
+    //         findSyndromFunc(horizontalDecodeResult, horizontalMatrixTransposed);
+    //         setIsSyndromHorizontalFound(true);
+
+    //         console.log('horizontal syndrom finding called');
+
+    //         if (isSyndromHorizontalFound) {
+    //             setIsSecondHorizontalDecodeDone(true);
+    //             doHorizontalDecode();
+
+    //             console.log('horizontal second decode called');
+
+    //             if (isSecondHorizontalDecodeDone) {
+    //                 getVerticalTargetMatrix(targetMatrix);
+    //                 setIsVerticalTargetMatrixGot(true);
+
+    //                 if (isVerticalTargetMatrixGot) {
+    //                     doVerticalDecode();
+    //                     setIsFirstVerticalDecodeDone(true);
+
+    //                     if (isFirstVerticalDecodeDone) {
+    //                         findSyndromFuncVertical(verticalDecodeResult, verticalMatrixTransposed);
+    //                         setIsSyndromVerticalFound(true);
+
+    //                         if (isSyndromVerticalFound) {
+    //                             doVerticalDecode();
+    //                             setIsSecondVerticalDecodeDone(true);
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
     // };
 
+    // console.log('target matrix: ', targetMatrix);
+    // console.log('vertical target matrix: ', verticalTargetMatrix);
+    // console.log('parity vertical check results array: ', verticalDecodeResult);
+    const emptyHorizontal = [0, 0, 0, 0, 0];
+    const emptyVertical = [0, 0, 0, 0];
+
+    const checkWasMessageIsRenewed = () => {
+        const horizontalRes = _.clone(horizontalDecodeResult);
+        const verticalRes = _.clone(verticalDecodeResult);
+
+        if (
+            _.isEqual(horizontalRes[0], emptyHorizontal) &&
+            _.isEqual(horizontalRes[1], emptyHorizontal) &&
+            _.isEqual(horizontalRes[2], emptyHorizontal) &&
+            _.isEqual(horizontalRes[3], emptyHorizontal) &&
+            _.isEqual(horizontalRes[4], emptyHorizontal) &&
+            _.isEqual(horizontalRes[5], emptyHorizontal) &&
+            _.isEqual(horizontalRes[6], emptyHorizontal) &&
+            _.isEqual(horizontalRes[7], emptyHorizontal) &&
+            _.isEqual(horizontalRes[8], emptyHorizontal) &&
+            _.isEqual(horizontalRes[9], emptyHorizontal) &&
+            _.isEqual(horizontalRes[10], emptyHorizontal) &&
+            _.isEqual(horizontalRes[11], emptyHorizontal) &&
+            _.isEqual(horizontalRes[12], emptyHorizontal) &&
+            _.isEqual(verticalRes[1], emptyVertical) &&
+            _.isEqual(verticalRes[2], emptyVertical) &&
+            _.isEqual(verticalRes[3], emptyVertical) &&
+            _.isEqual(verticalRes[4], emptyVertical) &&
+            _.isEqual(verticalRes[5], emptyVertical) &&
+            _.isEqual(verticalRes[6], emptyVertical) &&
+            _.isEqual(verticalRes[7], emptyVertical) &&
+            _.isEqual(verticalRes[8], emptyVertical) &&
+            _.isEqual(verticalRes[9], emptyVertical) &&
+            _.isEqual(verticalRes[10], emptyVertical) &&
+            _.isEqual(verticalRes[11], emptyVertical) &&
+            _.isEqual(verticalRes[12], emptyVertical) &&
+            _.isEqual(verticalRes[13], emptyVertical) &&
+            _.isEqual(verticalRes[14], emptyVertical) &&
+            _.isEqual(verticalRes[15], emptyVertical) &&
+            _.isEqual(verticalRes[16], emptyVertical) &&
+            _.isEqual(verticalRes[17], emptyVertical) &&
+            _.isEqual(verticalRes[18], emptyVertical) &&
+            _.isEqual(verticalRes[19], emptyVertical)
+        ) {
+            window.alert('Everything is clear');
+        }
+    };
+
     return (
-        <div className="some-shit">
-            <button onClick={doHorizontalDecode}>Do horizontal decode</button>
-            <button onClick={fixErrorsHorizontal}>Fix errors Horizontal</button>
-            <button onClick={callVerticalTargetMatrix}>Get vertical target matrix</button>
-            <button onClick={doVerticalDecode}>Do vertical decode</button>
-            <button onClick={fixErrorsVertical}>Fix errors Vertical</button>
-            <button onClick={callTransposeBack}>Transpose back</button>
+        <div className="some-cycle">
+            <div className="buttons-container">
+                <div className="buttons-step-by-step">
+                    <p>Do step-by-step</p>
+                    <button onClick={doHorizontalDecode}>Do horizontal checks</button>
+                    <button onClick={fixErrorsHorizontal}>Fix errors by Horizontal</button>
+                    <button onClick={doHorizontalDecode}>Do horizontal checks again</button>
+                    <button onClick={callVerticalTargetMatrix}>Get values for vertical decoding</button>
+                    <button onClick={doVerticalDecode}>Do verical checks</button>
+                    <button onClick={fixErrorsVertical}>Fix errors by Vertical</button>
+                    <button onClick={doVerticalDecode}>Do verical checks again</button>
+                    <button onClick={callTransposeBack}>Update target matrix state</button>
+                    <button onClick={checkWasMessageIsRenewed}>Check if message was renewed</button>
+
+                    {/* <button onClick={callVerticalTargetMatrix}>Get vertical target matrix</button>
+                    <button onClick={doVerticalDecode}>Do vertical checks</button>
+                    <button onClick={fixErrorsVertical}>Fix errors Vertical</button> */}
+                    {/* <button onClick={callTransposeBack}>Transpose back</button> */}
+                </div>
+                {/* <div className="do-in-one">
+                    <p>Do whole decoding in one click</p>
+                    <button id="do-in-one" onClick={final}>
+                        Do in one click
+                    </button>
+                </div> */}
+            </div>
             {isMatrixReachable && (
                 <div className="cycle-wrapper">
                     <div className="final-matrix-wrapper">
@@ -305,7 +430,6 @@ const Cycle = () => {
                             );
                         })}
                     </div>
-
                     <div className="horizontal-matrix-wrapper">
                         <div className="column-numbers-wrapper matrix-row">
                             {horizontalDecodeResult[0].map((element, index) => {

@@ -1,7 +1,17 @@
-.some-shit {
+.some-cycle {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+
+    .buttons-container {
+        display: flex;
+
+        .buttons-step-by-step {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+    }
 
     .cycle-wrapper {
         display: flex;

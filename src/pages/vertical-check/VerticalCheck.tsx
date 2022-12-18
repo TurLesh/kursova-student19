@@ -3613,7 +3613,11 @@ const VerticalCheck: FC = () => {
                 <div className="map-wrapper">
                     <div className="row-position">
                         {genericColumnsArr[0].map((element, index) => {
-                            return <div className="row-position-item">{index + 1}</div>;
+                            return (
+                                <div key={index} className="row-position-item">
+                                    {index + 1}
+                                </div>
+                            );
                         })}
                     </div>
                     {genericColumnsArr.map((column, index) => {
@@ -3621,7 +3625,7 @@ const VerticalCheck: FC = () => {
                             <div key={index} className="generic-column">
                                 {column.map((element, item) => {
                                     return (
-                                        <div className="generic-item" key={item}>
+                                        <div key={item} className="generic-item">
                                             {element}
                                         </div>
                                     );

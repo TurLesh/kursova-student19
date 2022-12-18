@@ -1234,7 +1234,7 @@ const Noise = () => {
     };
 
     // noise level const
-    const noiseLevel = 0.098;
+    const noiseLevel = 0.024;
 
     //noise row 1
     const [noise1x1, setNoise1x1] = useState<number>();
@@ -4988,27 +4988,34 @@ const Noise = () => {
     const [className13x19, setClassName13x19] = useState<string>('flip-number flip-v');
     const [className13x20, setClassName13x20] = useState<string>('flip-number flip-v');
 
+    const [numberOfWrongBits, setNumberOfWrongBits] = useState<number>(0);
+
     const showFliped = () => {
+        setNumberOfWrongBits(0);
         //row 1 show fliped
         if (noiseLevel > random1x1) {
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
             setClassName1x1('flip-number fliped');
         } else {
             setClassName1x1('flip-number');
         }
 
         if (noiseLevel > random1x2) {
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
             setClassName1x2('flip-number fliped');
         } else {
             setClassName1x2('flip-number');
         }
 
         if (noiseLevel > random1x3) {
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
             setClassName1x3('flip-number fliped');
         } else {
             setClassName1x3('flip-number');
         }
 
         if (noiseLevel > random1x4) {
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
             setClassName1x4('flip-number fliped');
         } else {
             setClassName1x4('flip-number');
@@ -5016,96 +5023,112 @@ const Noise = () => {
 
         if (noiseLevel > random1x5) {
             setClassName1x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x5('flip-number');
         }
 
         if (noiseLevel > random1x6) {
             setClassName1x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x6('flip-number');
         }
 
         if (noiseLevel > random1x7) {
             setClassName1x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x7('flip-number');
         }
 
         if (noiseLevel > random1x8) {
             setClassName1x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x8('flip-number');
         }
 
         if (noiseLevel > random1x9) {
             setClassName1x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x9('flip-number');
         }
 
         if (noiseLevel > random1x10) {
             setClassName1x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x10('flip-number');
         }
 
         if (noiseLevel > random1x11) {
             setClassName1x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x11('flip-number');
         }
 
         if (noiseLevel > random1x12) {
             setClassName1x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x12('flip-number');
         }
 
         if (noiseLevel > random1x13) {
             setClassName1x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x13('flip-number');
         }
 
         if (noiseLevel > random1x14) {
             setClassName1x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x14('flip-number');
         }
 
         if (noiseLevel > random1x15) {
             setClassName1x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x15('flip-number');
         }
 
         if (noiseLevel > random1x16) {
             setClassName1x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x16('flip-number flip-external');
         }
 
         if (noiseLevel > random1x17) {
             setClassName1x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x17('flip-number flip-external');
         }
 
         if (noiseLevel > random1x18) {
             setClassName1x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x18('flip-number flip-external');
         }
 
         if (noiseLevel > random1x19) {
             setClassName1x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x19('flip-number flip-external');
         }
 
         if (noiseLevel > random1x20) {
             setClassName1x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName1x20('flip-number flip-external');
         }
@@ -5113,120 +5136,140 @@ const Noise = () => {
         //row 2 show fliped
         if (noiseLevel > random2x1) {
             setClassName2x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x1('flip-number');
         }
 
         if (noiseLevel > random2x2) {
             setClassName2x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x2('flip-number');
         }
 
         if (noiseLevel > random2x3) {
             setClassName2x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x3('flip-number');
         }
 
         if (noiseLevel > random2x4) {
             setClassName2x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x4('flip-number');
         }
 
         if (noiseLevel > random2x5) {
             setClassName2x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x5('flip-number');
         }
 
         if (noiseLevel > random2x6) {
             setClassName2x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x6('flip-number');
         }
 
         if (noiseLevel > random2x7) {
             setClassName2x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x7('flip-number');
         }
 
         if (noiseLevel > random2x8) {
             setClassName2x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x8('flip-number');
         }
 
         if (noiseLevel > random2x9) {
             setClassName2x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x9('flip-number');
         }
 
         if (noiseLevel > random2x10) {
             setClassName2x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x10('flip-number');
         }
 
         if (noiseLevel > random2x11) {
             setClassName2x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x11('flip-number');
         }
 
         if (noiseLevel > random2x12) {
             setClassName2x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x12('flip-number');
         }
 
         if (noiseLevel > random2x13) {
             setClassName2x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x13('flip-number');
         }
 
         if (noiseLevel > random2x14) {
             setClassName2x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x14('flip-number');
         }
 
         if (noiseLevel > random2x15) {
             setClassName2x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x15('flip-number');
         }
 
         if (noiseLevel > random2x16) {
             setClassName2x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x16('flip-number flip-external');
         }
 
         if (noiseLevel > random2x17) {
             setClassName2x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x17('flip-number flip-external');
         }
 
         if (noiseLevel > random2x18) {
             setClassName2x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x18('flip-number flip-external');
         }
 
         if (noiseLevel > random2x19) {
             setClassName2x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x19('flip-number flip-external');
         }
 
         if (noiseLevel > random2x20) {
             setClassName2x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName2x20('flip-number flip-external');
         }
@@ -5234,120 +5277,140 @@ const Noise = () => {
         //row 3 show fliped
         if (noiseLevel > random3x1) {
             setClassName3x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x1('flip-number');
         }
 
         if (noiseLevel > random3x2) {
             setClassName3x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x2('flip-number');
         }
 
         if (noiseLevel > random3x3) {
             setClassName3x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x3('flip-number');
         }
 
         if (noiseLevel > random3x4) {
             setClassName3x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x4('flip-number');
         }
 
         if (noiseLevel > random3x5) {
             setClassName3x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x5('flip-number');
         }
 
         if (noiseLevel > random3x6) {
             setClassName3x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x6('flip-number');
         }
 
         if (noiseLevel > random3x7) {
             setClassName3x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x7('flip-number');
         }
 
         if (noiseLevel > random3x8) {
             setClassName3x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x8('flip-number');
         }
 
         if (noiseLevel > random3x9) {
             setClassName3x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x9('flip-number');
         }
 
         if (noiseLevel > random3x10) {
             setClassName3x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x10('flip-number');
         }
 
         if (noiseLevel > random3x11) {
             setClassName3x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x11('flip-number');
         }
 
         if (noiseLevel > random3x12) {
             setClassName3x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x12('flip-number');
         }
 
         if (noiseLevel > random3x13) {
             setClassName3x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x13('flip-number');
         }
 
         if (noiseLevel > random3x14) {
             setClassName3x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x14('flip-number');
         }
 
         if (noiseLevel > random3x15) {
             setClassName3x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x15('flip-number');
         }
 
         if (noiseLevel > random3x16) {
             setClassName3x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x16('flip-number flip-external');
         }
 
         if (noiseLevel > random3x17) {
             setClassName3x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x17('flip-number flip-external');
         }
 
         if (noiseLevel > random3x18) {
             setClassName3x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x18('flip-number flip-external');
         }
 
         if (noiseLevel > random3x19) {
             setClassName3x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x19('flip-number flip-external');
         }
 
         if (noiseLevel > random3x20) {
             setClassName3x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName3x20('flip-number flip-external');
         }
@@ -5355,120 +5418,140 @@ const Noise = () => {
         //row 4 show fliped
         if (noiseLevel > random4x1) {
             setClassName4x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x1('flip-number');
         }
 
         if (noiseLevel > random4x2) {
             setClassName4x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x2('flip-number');
         }
 
         if (noiseLevel > random4x3) {
             setClassName4x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x3('flip-number');
         }
 
         if (noiseLevel > random4x4) {
             setClassName4x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x4('flip-number');
         }
 
         if (noiseLevel > random4x5) {
             setClassName4x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x5('flip-number');
         }
 
         if (noiseLevel > random4x6) {
             setClassName4x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x6('flip-number');
         }
 
         if (noiseLevel > random4x7) {
             setClassName4x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x7('flip-number');
         }
 
         if (noiseLevel > random4x8) {
             setClassName4x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x8('flip-number');
         }
 
         if (noiseLevel > random4x9) {
             setClassName4x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x9('flip-number');
         }
 
         if (noiseLevel > random4x10) {
             setClassName4x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x10('flip-number');
         }
 
         if (noiseLevel > random4x11) {
             setClassName4x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x11('flip-number');
         }
 
         if (noiseLevel > random4x12) {
             setClassName4x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x12('flip-number');
         }
 
         if (noiseLevel > random4x13) {
             setClassName4x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x13('flip-number');
         }
 
         if (noiseLevel > random4x14) {
             setClassName4x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x14('flip-number');
         }
 
         if (noiseLevel > random4x15) {
             setClassName4x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x15('flip-number');
         }
 
         if (noiseLevel > random4x16) {
             setClassName4x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x16('flip-number flip-external');
         }
 
         if (noiseLevel > random4x17) {
             setClassName4x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x17('flip-number flip-external');
         }
 
         if (noiseLevel > random4x18) {
             setClassName4x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x18('flip-number flip-external');
         }
 
         if (noiseLevel > random4x19) {
             setClassName4x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x19('flip-number flip-external');
         }
 
         if (noiseLevel > random4x20) {
             setClassName4x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName4x20('flip-number flip-external');
         }
@@ -5476,120 +5559,140 @@ const Noise = () => {
         //row 5 show fliped
         if (noiseLevel > random5x1) {
             setClassName5x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x1('flip-number');
         }
 
         if (noiseLevel > random5x2) {
             setClassName5x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x2('flip-number');
         }
 
         if (noiseLevel > random5x3) {
             setClassName5x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x3('flip-number');
         }
 
         if (noiseLevel > random5x4) {
             setClassName5x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x4('flip-number');
         }
 
         if (noiseLevel > random5x5) {
             setClassName5x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x5('flip-number');
         }
 
         if (noiseLevel > random5x6) {
             setClassName5x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x6('flip-number');
         }
 
         if (noiseLevel > random5x7) {
             setClassName5x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x7('flip-number');
         }
 
         if (noiseLevel > random5x8) {
             setClassName5x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x8('flip-number');
         }
 
         if (noiseLevel > random5x9) {
             setClassName5x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x9('flip-number');
         }
 
         if (noiseLevel > random5x10) {
             setClassName5x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x10('flip-number');
         }
 
         if (noiseLevel > random5x11) {
             setClassName5x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x11('flip-number');
         }
 
         if (noiseLevel > random5x12) {
             setClassName5x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x12('flip-number');
         }
 
         if (noiseLevel > random5x13) {
             setClassName5x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x13('flip-number');
         }
 
         if (noiseLevel > random5x14) {
             setClassName5x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x14('flip-number');
         }
 
         if (noiseLevel > random5x15) {
             setClassName5x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x15('flip-number');
         }
 
         if (noiseLevel > random5x16) {
             setClassName5x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x16('flip-number flip-external');
         }
 
         if (noiseLevel > random5x17) {
             setClassName5x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x17('flip-number flip-external');
         }
 
         if (noiseLevel > random5x18) {
             setClassName5x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x18('flip-number flip-external');
         }
 
         if (noiseLevel > random5x19) {
             setClassName5x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x19('flip-number flip-external');
         }
 
         if (noiseLevel > random5x20) {
             setClassName5x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName5x20('flip-number flip-external');
         }
@@ -5597,120 +5700,140 @@ const Noise = () => {
         //row 6 show fliped
         if (noiseLevel > random6x1) {
             setClassName6x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x1('flip-number');
         }
 
         if (noiseLevel > random6x2) {
             setClassName6x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x2('flip-number');
         }
 
         if (noiseLevel > random6x3) {
             setClassName6x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x3('flip-number');
         }
 
         if (noiseLevel > random6x4) {
             setClassName6x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x4('flip-number');
         }
 
         if (noiseLevel > random6x5) {
             setClassName6x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x5('flip-number');
         }
 
         if (noiseLevel > random6x6) {
             setClassName6x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x6('flip-number');
         }
 
         if (noiseLevel > random6x7) {
             setClassName6x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x7('flip-number');
         }
 
         if (noiseLevel > random6x8) {
             setClassName6x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x8('flip-number');
         }
 
         if (noiseLevel > random6x9) {
             setClassName6x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x9('flip-number');
         }
 
         if (noiseLevel > random6x10) {
             setClassName6x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x10('flip-number');
         }
 
         if (noiseLevel > random6x11) {
             setClassName6x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x11('flip-number');
         }
 
         if (noiseLevel > random6x12) {
             setClassName6x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x12('flip-number');
         }
 
         if (noiseLevel > random6x13) {
             setClassName6x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x13('flip-number');
         }
 
         if (noiseLevel > random6x14) {
             setClassName6x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x14('flip-number');
         }
 
         if (noiseLevel > random6x15) {
             setClassName6x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x15('flip-number');
         }
 
         if (noiseLevel > random6x16) {
             setClassName6x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x16('flip-number flip-external');
         }
 
         if (noiseLevel > random6x17) {
             setClassName6x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x17('flip-number flip-external');
         }
 
         if (noiseLevel > random6x18) {
             setClassName6x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x18('flip-number flip-external');
         }
 
         if (noiseLevel > random6x19) {
             setClassName6x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x19('flip-number flip-external');
         }
 
         if (noiseLevel > random6x20) {
             setClassName6x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName6x20('flip-number flip-external');
         }
@@ -5718,120 +5841,140 @@ const Noise = () => {
         //row 7 show fliped
         if (noiseLevel > random7x1) {
             setClassName7x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x1('flip-number');
         }
 
         if (noiseLevel > random7x2) {
             setClassName7x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x2('flip-number');
         }
 
         if (noiseLevel > random7x3) {
             setClassName7x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x3('flip-number');
         }
 
         if (noiseLevel > random7x4) {
             setClassName7x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x4('flip-number');
         }
 
         if (noiseLevel > random7x5) {
             setClassName7x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x5('flip-number');
         }
 
         if (noiseLevel > random7x6) {
             setClassName7x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x6('flip-number');
         }
 
         if (noiseLevel > random7x7) {
             setClassName7x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x7('flip-number');
         }
 
         if (noiseLevel > random7x8) {
             setClassName7x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x8('flip-number');
         }
 
         if (noiseLevel > random7x9) {
             setClassName7x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x9('flip-number');
         }
 
         if (noiseLevel > random7x10) {
             setClassName7x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x10('flip-number');
         }
 
         if (noiseLevel > random7x11) {
             setClassName7x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x11('flip-number');
         }
 
         if (noiseLevel > random7x12) {
             setClassName7x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x12('flip-number');
         }
 
         if (noiseLevel > random7x13) {
             setClassName7x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x13('flip-number');
         }
 
         if (noiseLevel > random7x14) {
             setClassName7x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x14('flip-number');
         }
 
         if (noiseLevel > random7x15) {
             setClassName7x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x15('flip-number');
         }
 
         if (noiseLevel > random7x16) {
             setClassName7x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x16('flip-number flip-external');
         }
 
         if (noiseLevel > random7x17) {
             setClassName7x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x17('flip-number flip-external');
         }
 
         if (noiseLevel > random7x18) {
             setClassName7x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x18('flip-number flip-external');
         }
 
         if (noiseLevel > random7x19) {
             setClassName7x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x19('flip-number flip-external');
         }
 
         if (noiseLevel > random7x20) {
             setClassName7x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName7x20('flip-number flip-external');
         }
@@ -5839,120 +5982,140 @@ const Noise = () => {
         //row 8 show fliped
         if (noiseLevel > random8x1) {
             setClassName8x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x1('flip-number');
         }
 
         if (noiseLevel > random8x2) {
             setClassName8x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x2('flip-number');
         }
 
         if (noiseLevel > random8x3) {
             setClassName8x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x3('flip-number');
         }
 
         if (noiseLevel > random8x4) {
             setClassName8x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x4('flip-number');
         }
 
         if (noiseLevel > random8x5) {
             setClassName8x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x5('flip-number');
         }
 
         if (noiseLevel > random8x6) {
             setClassName8x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x6('flip-number');
         }
 
         if (noiseLevel > random8x7) {
             setClassName8x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x7('flip-number');
         }
 
         if (noiseLevel > random8x8) {
             setClassName8x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x8('flip-number');
         }
 
         if (noiseLevel > random8x9) {
             setClassName8x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x9('flip-number');
         }
 
         if (noiseLevel > random8x10) {
             setClassName8x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x10('flip-number');
         }
 
         if (noiseLevel > random8x11) {
             setClassName8x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x11('flip-number');
         }
 
         if (noiseLevel > random8x12) {
             setClassName8x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x12('flip-number');
         }
 
         if (noiseLevel > random8x13) {
             setClassName8x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x13('flip-number');
         }
 
         if (noiseLevel > random8x14) {
             setClassName8x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x14('flip-number');
         }
 
         if (noiseLevel > random8x15) {
             setClassName8x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x15('flip-number');
         }
 
         if (noiseLevel > random8x16) {
             setClassName8x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x16('flip-number flip-external');
         }
 
         if (noiseLevel > random8x17) {
             setClassName8x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x17('flip-number flip-external');
         }
 
         if (noiseLevel > random8x18) {
             setClassName8x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x18('flip-number flip-external');
         }
 
         if (noiseLevel > random8x19) {
             setClassName8x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x19('flip-number flip-external');
         }
 
         if (noiseLevel > random8x20) {
             setClassName8x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName8x20('flip-number flip-external');
         }
@@ -5960,120 +6123,140 @@ const Noise = () => {
         //row 9 show fliped
         if (noiseLevel > random9x1) {
             setClassName9x1('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x1('flip-number');
         }
 
         if (noiseLevel > random9x2) {
             setClassName9x2('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x2('flip-number');
         }
 
         if (noiseLevel > random9x3) {
             setClassName9x3('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x3('flip-number');
         }
 
         if (noiseLevel > random9x4) {
             setClassName9x4('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x4('flip-number');
         }
 
         if (noiseLevel > random9x5) {
             setClassName9x5('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x5('flip-number');
         }
 
         if (noiseLevel > random9x6) {
             setClassName9x6('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x6('flip-number');
         }
 
         if (noiseLevel > random9x7) {
             setClassName9x7('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x7('flip-number');
         }
 
         if (noiseLevel > random9x8) {
             setClassName9x8('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x8('flip-number');
         }
 
         if (noiseLevel > random9x9) {
             setClassName9x9('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x9('flip-number');
         }
 
         if (noiseLevel > random9x10) {
             setClassName9x10('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x10('flip-number');
         }
 
         if (noiseLevel > random9x11) {
             setClassName9x11('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x11('flip-number');
         }
 
         if (noiseLevel > random9x12) {
             setClassName9x12('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x12('flip-number');
         }
 
         if (noiseLevel > random9x13) {
             setClassName9x13('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x13('flip-number');
         }
 
         if (noiseLevel > random9x14) {
             setClassName9x14('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x14('flip-number');
         }
 
         if (noiseLevel > random9x15) {
             setClassName9x15('flip-number fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x15('flip-number');
         }
 
         if (noiseLevel > random9x16) {
             setClassName9x16('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x16('flip-number flip-external');
         }
 
         if (noiseLevel > random9x17) {
             setClassName9x17('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x17('flip-number flip-external');
         }
 
         if (noiseLevel > random9x18) {
             setClassName9x18('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x18('flip-number flip-external');
         }
 
         if (noiseLevel > random9x19) {
             setClassName9x19('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x19('flip-number flip-external');
         }
 
         if (noiseLevel > random9x20) {
             setClassName9x20('flip-number flip-external fliped');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName9x20('flip-number flip-external');
         }
@@ -6081,120 +6264,140 @@ const Noise = () => {
         //row 10 show fliped
         if (noiseLevel > random10x1) {
             setClassName10x1('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x1('flip-number flip-v');
         }
 
         if (noiseLevel > random10x2) {
             setClassName10x2('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x2('flip-number flip-v');
         }
 
         if (noiseLevel > random10x3) {
             setClassName10x3('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x3('flip-number flip-v');
         }
 
         if (noiseLevel > random10x4) {
             setClassName10x4('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x4('flip-number flip-v');
         }
 
         if (noiseLevel > random10x5) {
             setClassName10x5('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x5('flip-number flip-v');
         }
 
         if (noiseLevel > random10x6) {
             setClassName10x6('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x6('flip-number flip-v');
         }
 
         if (noiseLevel > random10x7) {
             setClassName10x7('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x7('flip-number flip-v');
         }
 
         if (noiseLevel > random10x8) {
             setClassName10x8('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x8('flip-number flip-v');
         }
 
         if (noiseLevel > random10x9) {
             setClassName10x9('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x9('flip-number flip-v');
         }
 
         if (noiseLevel > random10x10) {
             setClassName10x10('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x10('flip-number flip-v');
         }
 
         if (noiseLevel > random10x11) {
             setClassName10x11('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x11('flip-number flip-v');
         }
 
         if (noiseLevel > random10x12) {
             setClassName10x12('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x12('flip-number flip-v');
         }
 
         if (noiseLevel > random10x13) {
             setClassName10x13('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x13('flip-number flip-v');
         }
 
         if (noiseLevel > random10x14) {
             setClassName10x14('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x14('flip-number flip-v');
         }
 
         if (noiseLevel > random10x15) {
             setClassName10x15('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x15('flip-number flip-v');
         }
 
         if (noiseLevel > random10x16) {
             setClassName10x16('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x16('flip-number flip-v');
         }
 
         if (noiseLevel > random10x17) {
             setClassName10x17('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x17('flip-number flip-v');
         }
 
         if (noiseLevel > random10x18) {
             setClassName10x18('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x18('flip-number flip-v');
         }
 
         if (noiseLevel > random10x19) {
             setClassName10x19('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x19('flip-number flip-v');
         }
 
         if (noiseLevel > random10x20) {
             setClassName10x20('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName10x20('flip-number flip-v');
         }
@@ -6202,120 +6405,140 @@ const Noise = () => {
         //row 11 show fliped
         if (noiseLevel > random11x1) {
             setClassName11x1('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x1('flip-number flip-v');
         }
 
         if (noiseLevel > random11x2) {
             setClassName11x2('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x2('flip-number flip-v');
         }
 
         if (noiseLevel > random11x3) {
             setClassName11x3('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x3('flip-number flip-v');
         }
 
         if (noiseLevel > random11x4) {
             setClassName11x4('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x4('flip-number flip-v');
         }
 
         if (noiseLevel > random11x5) {
             setClassName11x5('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x5('flip-number flip-v');
         }
 
         if (noiseLevel > random11x6) {
             setClassName11x6('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x6('flip-number flip-v');
         }
 
         if (noiseLevel > random11x7) {
             setClassName11x7('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x7('flip-number flip-v');
         }
 
         if (noiseLevel > random11x8) {
             setClassName11x8('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x8('flip-number flip-v');
         }
 
         if (noiseLevel > random11x9) {
             setClassName11x9('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x9('flip-number flip-v');
         }
 
         if (noiseLevel > random11x10) {
             setClassName11x10('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x10('flip-number flip-v');
         }
 
         if (noiseLevel > random11x11) {
             setClassName11x11('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x11('flip-number flip-v');
         }
 
         if (noiseLevel > random11x12) {
             setClassName11x12('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x12('flip-number flip-v');
         }
 
         if (noiseLevel > random11x13) {
             setClassName11x13('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x13('flip-number flip-v');
         }
 
         if (noiseLevel > random11x14) {
             setClassName11x14('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x14('flip-number flip-v');
         }
 
         if (noiseLevel > random11x15) {
             setClassName11x15('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x15('flip-number flip-v');
         }
 
         if (noiseLevel > random11x16) {
             setClassName11x16('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x16('flip-number flip-v');
         }
 
         if (noiseLevel > random11x17) {
             setClassName11x17('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x17('flip-number flip-v');
         }
 
         if (noiseLevel > random11x18) {
             setClassName11x18('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x18('flip-number flip-v');
         }
 
         if (noiseLevel > random11x19) {
             setClassName11x19('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x19('flip-number flip-v');
         }
 
         if (noiseLevel > random11x20) {
             setClassName11x20('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName11x20('flip-number flip-v');
         }
@@ -6323,120 +6546,140 @@ const Noise = () => {
         //row 12 show fliped flip-v
         if (noiseLevel > random12x1) {
             setClassName12x1('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x1('flip-number flip-v');
         }
 
         if (noiseLevel > random12x2) {
             setClassName12x2('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x2('flip-number flip-v');
         }
 
         if (noiseLevel > random12x3) {
             setClassName12x3('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x3('flip-number flip-v');
         }
 
         if (noiseLevel > random12x4) {
             setClassName12x4('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x4('flip-number flip-v');
         }
 
         if (noiseLevel > random12x5) {
             setClassName12x5('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x5('flip-number flip-v');
         }
 
         if (noiseLevel > random12x6) {
             setClassName12x6('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x6('flip-number flip-v');
         }
 
         if (noiseLevel > random12x7) {
             setClassName12x7('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x7('flip-number flip-v');
         }
 
         if (noiseLevel > random12x8) {
             setClassName12x8('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x8('flip-number flip-v');
         }
 
         if (noiseLevel > random12x9) {
             setClassName12x9('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x9('flip-number flip-v');
         }
 
         if (noiseLevel > random12x10) {
             setClassName12x10('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x10('flip-number flip-v');
         }
 
         if (noiseLevel > random12x11) {
             setClassName12x11('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x11('flip-number flip-v');
         }
 
         if (noiseLevel > random12x12) {
             setClassName12x12('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x12('flip-number flip-v');
         }
 
         if (noiseLevel > random12x13) {
             setClassName12x13('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x13('flip-number flip-v');
         }
 
         if (noiseLevel > random12x14) {
             setClassName12x14('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x14('flip-number flip-v');
         }
 
         if (noiseLevel > random12x15) {
             setClassName12x15('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x15('flip-number flip-v');
         }
 
         if (noiseLevel > random12x16) {
             setClassName12x16('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x16('flip-number flip-v');
         }
 
         if (noiseLevel > random12x17) {
             setClassName12x17('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x17('flip-number flip-v');
         }
 
         if (noiseLevel > random12x18) {
             setClassName12x18('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x18('flip-number flip-v');
         }
 
         if (noiseLevel > random12x19) {
             setClassName12x19('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x19('flip-number flip-v');
         }
 
         if (noiseLevel > random12x20) {
             setClassName12x20('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName12x20('flip-number flip-v');
         }
@@ -6444,120 +6687,140 @@ const Noise = () => {
         //row 13 show fliped flip-v
         if (noiseLevel > random13x1) {
             setClassName13x1('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x1('flip-number flip-v');
         }
 
         if (noiseLevel > random13x2) {
             setClassName13x2('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x2('flip-number flip-v');
         }
 
         if (noiseLevel > random13x3) {
             setClassName13x3('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x3('flip-number flip-v');
         }
 
         if (noiseLevel > random13x4) {
             setClassName13x4('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x4('flip-number flip-v');
         }
 
         if (noiseLevel > random13x5) {
             setClassName13x5('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x5('flip-number flip-v');
         }
 
         if (noiseLevel > random13x6) {
             setClassName13x6('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x6('flip-number flip-v');
         }
 
         if (noiseLevel > random13x7) {
             setClassName13x7('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x7('flip-number flip-v');
         }
 
         if (noiseLevel > random13x8) {
             setClassName13x8('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x8('flip-number flip-v');
         }
 
         if (noiseLevel > random13x9) {
             setClassName13x9('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x9('flip-number flip-v');
         }
 
         if (noiseLevel > random13x10) {
             setClassName13x10('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x10('flip-number flip-v');
         }
 
         if (noiseLevel > random13x11) {
             setClassName13x11('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x11('flip-number flip-v');
         }
 
         if (noiseLevel > random13x12) {
             setClassName13x12('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x12('flip-number flip-v');
         }
 
         if (noiseLevel > random13x13) {
             setClassName13x13('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x13('flip-number flip-v');
         }
 
         if (noiseLevel > random13x14) {
             setClassName13x14('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x14('flip-number flip-v');
         }
 
         if (noiseLevel > random13x15) {
             setClassName13x15('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x15('flip-number flip-v');
         }
 
         if (noiseLevel > random13x16) {
             setClassName13x16('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x16('flip-number flip-v');
         }
 
         if (noiseLevel > random13x17) {
             setClassName13x17('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x17('flip-number flip-v');
         }
 
         if (noiseLevel > random13x18) {
             setClassName13x18('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x18('flip-number flip-v');
         }
 
         if (noiseLevel > random13x19) {
             setClassName13x19('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x19('flip-number flip-v');
         }
 
         if (noiseLevel > random13x20) {
             setClassName13x20('flip-number fliped flip-v');
+            setNumberOfWrongBits((prevNumber) => prevNumber + 1);
         } else {
             setClassName13x20('flip-number flip-v');
         }
@@ -7218,6 +7481,7 @@ const Noise = () => {
                 <button onClick={simulateNoise}>Simulate Noise</button>
                 <button onClick={showFliped}>Show Fliped</button>
                 <button onClick={passNoiseToLocal}>Pass results to storage</button>
+                <p>Number of wrong bits: {numberOfWrongBits}</p>
             </div>
         </div>
     );
