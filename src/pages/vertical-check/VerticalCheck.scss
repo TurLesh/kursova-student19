@@ -8,8 +8,13 @@
 
         .column-position {
             display: flex;
-            justify-content: space-between;
-            color: rgb(37, 18, 238);
+            // justify-content: space-between;
+            .column-position-item {
+                width: 50px;
+                border: 1px solid black;
+                background-color: bisque;
+                color: rgb(37, 18, 238);
+            }
         }
 
         .generic-row {
@@ -18,6 +23,31 @@
             .row-position {
                 margin-right: 10px;
                 color: rgb(37, 18, 238);
+            }
+        }
+
+        .map-wrapper {
+            display: flex;
+
+            .row-position {
+                display: flex;
+                flex-direction: column;
+
+                .row-position-item {
+                    width: 50px;
+                    border: 1px solid black;
+                    background-color: bisque;
+                    color: rgb(37, 18, 238);
+                }
+            }
+
+            .generic-column {
+                display: flex;
+                flex-direction: column;
+                .generic-item {
+                    width: 50px;
+                    border: 1px solid black;
+                }
             }
         }
     }

@@ -6,8 +6,8 @@ import HorizontalCheck from './pages/horizontal-check/HorizontalCheck';
 import HorizontalCheckV2 from './pages/horizontal-v2/Horizontal-v2';
 import VerticalCheck from './pages/vertical-check/VerticalCheck';
 import Noise from './pages/noise/Noise';
-import Decode from './pages/decode/Decode';
-import Cycle from './pages/cycle/Cycle';
+import Decode from './pages/decode-monkey/Decode';
+import Cycle from './pages/decode/Cycle';
 
 function App() {
     return (

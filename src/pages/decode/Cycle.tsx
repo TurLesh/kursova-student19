@@ -14,9 +14,6 @@ const Cycle = () => {
     const [isMatrixReachable, setMatrixReachable] = useState(false);
     const [isVerticalMatrixReachable, setVerticalMatrixReachable] = useState(false);
 
-    // console.log('horizontal transposed: ', horizontalMatrixTransposed);
-    // console.log('vertical transposed: ', verticalMatrixTransposed);
-
     const readNoiseMatrix = () => {
         const noiseGetRow1Str = localStorage.getItem('noiseRow1');
         const noiseGetRow2Str = localStorage.getItem('noiseRow2');
@@ -167,38 +164,6 @@ const Cycle = () => {
         doHorizontalDecode();
     };
 
-    // const findVerticalTargetMatrix = () => {
-    //     const verticalRow1 = [...targetMatrix[0]];
-    //     const verticalRow2 = [...targetMatrix[1]];
-    //     const verticalRow3 = [...targetMatrix[2]];
-    //     const verticalRow4 = [...targetMatrix[3]];
-    //     const verticalRow5 = [...targetMatrix[4]];
-    //     const verticalRow6 = [...targetMatrix[5]];
-    //     const verticalRow7 = [...targetMatrix[6]];
-    //     const verticalRow8 = [...targetMatrix[7]];
-    //     const verticalRow9 = [...targetMatrix[8]];
-    //     const verticalRow10 = [...targetMatrix[9]];
-    //     const verticalRow11 = [...targetMatrix[10]];
-    //     const verticalRow12 = [...targetMatrix[11]];
-    //     const verticalRow13 = [...targetMatrix[12]];
-
-    //     setVerticalDecodeTargetMatrix([
-    //         verticalRow1,
-    //         verticalRow2,
-    //         verticalRow3,
-    //         verticalRow4,
-    //         verticalRow5,
-    //         verticalRow6,
-    //         verticalRow7,
-    //         verticalRow8,
-    //         verticalRow9,
-    //         verticalRow10,
-    //         verticalRow11,
-    //         verticalRow12,
-    //         verticalRow13
-    //     ]);
-    // };
-
     const getVerticalTargetMatrix = (targetMatrix: number[][]) => {
         const result: any = _.zip.apply(_, targetMatrix);
         setVerticalTargetMatrix(result);
@@ -300,20 +265,9 @@ const Cycle = () => {
         transposeFromVerticalToTarget(verticalTargetMatrix);
     };
 
-    console.log('target matrix: ', targetMatrix);
-    console.log('vertical target matrix: ', verticalTargetMatrix);
-
-    // const oneIterationMatrixTrasposeFunc = (verticalTargetMatrix: number[][]) => {
-    //     const result: any = _.zip.apply(_, verticalTargetMatrix);
-
-    //     console.log('one decode iteration result', result);
+    // const writeResult = () => {
+    //     setResult([targetMatrix, horizontalDecodeResult, verticalDecodeResult]);
     // };
-
-    // const getResultFunction = () => {
-    //     oneIterationMatrixTrasposeFunc(verticalDecodeTargetMatrix);
-    // };
-
-    // console.log('vertical decode target matrix: ', verticalDecodeTargetMatrix);
 
     return (
         <div className="some-shit">
@@ -323,11 +277,6 @@ const Cycle = () => {
             <button onClick={doVerticalDecode}>Do vertical decode</button>
             <button onClick={fixErrorsVertical}>Fix errors Vertical</button>
             <button onClick={callTransposeBack}>Transpose back</button>
-            {/* <button onClick={findVerticalTargetMatrix}>Find target matrix for vertical decode</button>
-            <button onClick={callVerticalTransposed}>Transpose target matrix for vertical decode</button>
-            <button onClick={doVerticalDecode}>Do vertical decode</button>
-            <button onClick={fixErrorsVertical}>Fix errors Vertical</button>
-            <button onClick={getResultFunction}>Get final result</button> */}
             {isMatrixReachable && (
                 <div className="cycle-wrapper">
                     <div className="final-matrix-wrapper">

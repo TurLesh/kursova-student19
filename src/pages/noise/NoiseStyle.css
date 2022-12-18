@@ -16,7 +16,7 @@
 }
 .noise-wrapper .random-wrapper .random-row .random-number {
   text-align: center;
-  width: 70px;
+  width: 50px;
   border: 1px solid black;
 }
 .noise-wrapper .flip-wrapper {
@@ -37,7 +37,7 @@
 }
 .noise-wrapper .flip-wrapper .flip-row .flip-number {
   text-align: center;
-  width: 70px;
+  width: 50px;
   border: 1px solid black;
 }
 .noise-wrapper .flip-wrapper .flip-row .flip-v {

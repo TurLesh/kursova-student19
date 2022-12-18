@@ -2,562 +2,650 @@ import React, { useState, ChangeEvent } from 'react';
 import './HorizontalV2.css';
 
 const HorizontalCheckV2 = () => {
+    const generic11 = 1;
+    const generic21 = 1;
+    const generic31 = 1;
+    const generic41 = 1;
+    const generic51 = 0;
+    const generic61 = 0;
+    const generic71 = 0;
+    const generic81 = 0;
+    const generic91 = 0;
+    const generic101 = 0;
+    const generic111 = 1;
+    const generic121 = 1;
+    const generic131 = 1;
+    const generic141 = 0;
+    const generic151 = 0;
+
+    const generic12 = 1;
+    const generic22 = 0;
+    const generic32 = 0;
+    const generic42 = 0;
+    const generic52 = 1;
+    const generic62 = 1;
+    const generic72 = 1;
+    const generic82 = 0;
+    const generic92 = 0;
+    const generic102 = 0;
+    const generic112 = 1;
+    const generic122 = 0;
+    const generic132 = 0;
+    const generic142 = 1;
+    const generic152 = 1;
+
+    const generic13 = 0;
+    const generic23 = 1;
+    const generic33 = 0;
+    const generic43 = 0;
+    const generic53 = 1;
+    const generic63 = 0;
+    const generic73 = 0;
+    const generic83 = 1;
+    const generic93 = 1;
+    const generic103 = 0;
+    const generic113 = 1;
+    const generic123 = 1;
+    const generic133 = 0;
+    const generic143 = 1;
+    const generic153 = 0;
+
+    const generic14 = 0;
+    const generic24 = 0;
+    const generic34 = 1;
+    const generic44 = 0;
+    const generic54 = 0;
+    const generic64 = 1;
+    const generic74 = 0;
+    const generic84 = 1;
+    const generic94 = 0;
+    const generic104 = 1;
+    const generic114 = 0;
+    const generic124 = 1;
+    const generic134 = 1;
+    const generic144 = 1;
+    const generic154 = 1;
+
+    const generic15 = 0;
+    const generic25 = 0;
+    const generic35 = 0;
+    const generic45 = 1;
+    const generic55 = 0;
+    const generic65 = 0;
+    const generic75 = 1;
+    const generic85 = 0;
+    const generic95 = 1;
+    const generic105 = 1;
+    const generic115 = 0;
+    const generic125 = 0;
+    const generic135 = 1;
+    const generic145 = 0;
+    const generic155 = 1;
+
+    const columnGeneric1 = [generic11, generic21, generic31, generic41, generic51, generic61, generic71, generic81, generic91, generic101, generic111, generic121, generic131, generic141, generic151];
+    const columnGeneric2 = [generic12, generic22, generic32, generic42, generic52, generic62, generic72, generic82, generic92, generic102, generic112, generic122, generic132, generic142, generic152];
+    const columnGeneric3 = [generic13, generic23, generic33, generic43, generic53, generic63, generic73, generic83, generic93, generic103, generic113, generic123, generic133, generic143, generic153];
+    const columnGeneric4 = [generic14, generic24, generic34, generic44, generic54, generic64, generic74, generic84, generic94, generic104, generic114, generic124, generic134, generic144, generic154];
+    const columnGeneric5 = [generic15, generic25, generic35, generic45, generic55, generic65, generic75, generic85, generic95, generic105, generic115, generic125, generic135, generic145, generic155];
+
+    const genericColumnsArr = [columnGeneric1, columnGeneric2, columnGeneric3, columnGeneric4, columnGeneric5];
+
     // ******* GENERIC *******
 
     // column 1 states
-    const [generic11, setGeneric11] = useState<number | null>();
-    const [generic21, setGeneric21] = useState<number | null>();
-    const [generic31, setGeneric31] = useState<number | null>();
-    const [generic41, setGeneric41] = useState<number | null>();
-    const [generic51, setGeneric51] = useState<number | null>();
-    const [generic61, setGeneric61] = useState<number | null>();
-    const [generic71, setGeneric71] = useState<number | null>();
-    const [generic81, setGeneric81] = useState<number | null>();
-    const [generic91, setGeneric91] = useState<number | null>();
-    const [generic101, setGeneric101] = useState<number | null>();
-    const [generic111, setGeneric111] = useState<number | null>();
-    const [generic121, setGeneric121] = useState<number | null>();
-    const [generic131, setGeneric131] = useState<number | null>();
-    const [generic141, setGeneric141] = useState<number | null>();
-    const [generic151, setGeneric151] = useState<number | null>();
+    // const [generic11, setGeneric11] = useState<number | null>();
+    // const [generic21, setGeneric21] = useState<number | null>();
+    // const [generic31, setGeneric31] = useState<number | null>();
+    // const [generic41, setGeneric41] = useState<number | null>();
+    // const [generic51, setGeneric51] = useState<number | null>();
+    // const [generic61, setGeneric61] = useState<number | null>();
+    // const [generic71, setGeneric71] = useState<number | null>();
+    // const [generic81, setGeneric81] = useState<number | null>();
+    // const [generic91, setGeneric91] = useState<number | null>();
+    // const [generic101, setGeneric101] = useState<number | null>();
+    // const [generic111, setGeneric111] = useState<number | null>();
+    // const [generic121, setGeneric121] = useState<number | null>();
+    // const [generic131, setGeneric131] = useState<number | null>();
+    // const [generic141, setGeneric141] = useState<number | null>();
+    // const [generic151, setGeneric151] = useState<number | null>();
 
-    // column 2 states
-    const [generic12, setGeneric12] = useState<number | null>();
-    const [generic22, setGeneric22] = useState<number | null>();
-    const [generic32, setGeneric32] = useState<number | null>();
-    const [generic42, setGeneric42] = useState<number | null>();
-    const [generic52, setGeneric52] = useState<number | null>();
-    const [generic62, setGeneric62] = useState<number | null>();
-    const [generic72, setGeneric72] = useState<number | null>();
-    const [generic82, setGeneric82] = useState<number | null>();
-    const [generic92, setGeneric92] = useState<number | null>();
-    const [generic102, setGeneric102] = useState<number | null>();
-    const [generic112, setGeneric112] = useState<number | null>();
-    const [generic122, setGeneric122] = useState<number | null>();
-    const [generic132, setGeneric132] = useState<number | null>();
-    const [generic142, setGeneric142] = useState<number | null>();
-    const [generic152, setGeneric152] = useState<number | null>();
+    // // column 2 states
+    // const [generic12, setGeneric12] = useState<number | null>();
+    // const [generic22, setGeneric22] = useState<number | null>();
+    // const [generic32, setGeneric32] = useState<number | null>();
+    // const [generic42, setGeneric42] = useState<number | null>();
+    // const [generic52, setGeneric52] = useState<number | null>();
+    // const [generic62, setGeneric62] = useState<number | null>();
+    // const [generic72, setGeneric72] = useState<number | null>();
+    // const [generic82, setGeneric82] = useState<number | null>();
+    // const [generic92, setGeneric92] = useState<number | null>();
+    // const [generic102, setGeneric102] = useState<number | null>();
+    // const [generic112, setGeneric112] = useState<number | null>();
+    // const [generic122, setGeneric122] = useState<number | null>();
+    // const [generic132, setGeneric132] = useState<number | null>();
+    // const [generic142, setGeneric142] = useState<number | null>();
+    // const [generic152, setGeneric152] = useState<number | null>();
 
     // column 3 states
-    const [generic13, setGeneric13] = useState<number | null>();
-    const [generic23, setGeneric23] = useState<number | null>();
-    const [generic33, setGeneric33] = useState<number | null>();
-    const [generic43, setGeneric43] = useState<number | null>();
-    const [generic53, setGeneric53] = useState<number | null>();
-    const [generic63, setGeneric63] = useState<number | null>();
-    const [generic73, setGeneric73] = useState<number | null>();
-    const [generic83, setGeneric83] = useState<number | null>();
-    const [generic93, setGeneric93] = useState<number | null>();
-    const [generic103, setGeneric103] = useState<number | null>();
-    const [generic113, setGeneric113] = useState<number | null>();
-    const [generic123, setGeneric123] = useState<number | null>();
-    const [generic133, setGeneric133] = useState<number | null>();
-    const [generic143, setGeneric143] = useState<number | null>();
-    const [generic153, setGeneric153] = useState<number | null>();
+    // const [generic13, setGeneric13] = useState<number | null>();
+    // const [generic23, setGeneric23] = useState<number | null>();
+    // const [generic33, setGeneric33] = useState<number | null>();
+    // const [generic43, setGeneric43] = useState<number | null>();
+    // const [generic53, setGeneric53] = useState<number | null>();
+    // const [generic63, setGeneric63] = useState<number | null>();
+    // const [generic73, setGeneric73] = useState<number | null>();
+    // const [generic83, setGeneric83] = useState<number | null>();
+    // const [generic93, setGeneric93] = useState<number | null>();
+    // const [generic103, setGeneric103] = useState<number | null>();
+    // const [generic113, setGeneric113] = useState<number | null>();
+    // const [generic123, setGeneric123] = useState<number | null>();
+    // const [generic133, setGeneric133] = useState<number | null>();
+    // const [generic143, setGeneric143] = useState<number | null>();
+    // const [generic153, setGeneric153] = useState<number | null>();
 
     // column 4 states
-    const [generic14, setGeneric14] = useState<number | null>();
-    const [generic24, setGeneric24] = useState<number | null>();
-    const [generic34, setGeneric34] = useState<number | null>();
-    const [generic44, setGeneric44] = useState<number | null>();
-    const [generic54, setGeneric54] = useState<number | null>();
-    const [generic64, setGeneric64] = useState<number | null>();
-    const [generic74, setGeneric74] = useState<number | null>();
-    const [generic84, setGeneric84] = useState<number | null>();
-    const [generic94, setGeneric94] = useState<number | null>();
-    const [generic104, setGeneric104] = useState<number | null>();
-    const [generic114, setGeneric114] = useState<number | null>();
-    const [generic124, setGeneric124] = useState<number | null>();
-    const [generic134, setGeneric134] = useState<number | null>();
-    const [generic144, setGeneric144] = useState<number | null>();
-    const [generic154, setGeneric154] = useState<number | null>();
+    // const [generic14, setGeneric14] = useState<number | null>();
+    // const [generic24, setGeneric24] = useState<number | null>();
+    // const [generic34, setGeneric34] = useState<number | null>();
+    // const [generic44, setGeneric44] = useState<number | null>();
+    // const [generic54, setGeneric54] = useState<number | null>();
+    // const [generic64, setGeneric64] = useState<number | null>();
+    // const [generic74, setGeneric74] = useState<number | null>();
+    // const [generic84, setGeneric84] = useState<number | null>();
+    // const [generic94, setGeneric94] = useState<number | null>();
+    // const [generic104, setGeneric104] = useState<number | null>();
+    // const [generic114, setGeneric114] = useState<number | null>();
+    // const [generic124, setGeneric124] = useState<number | null>();
+    // const [generic134, setGeneric134] = useState<number | null>();
+    // const [generic144, setGeneric144] = useState<number | null>();
+    // const [generic154, setGeneric154] = useState<number | null>();
 
     // column 5 states
-    const [generic15, setGeneric15] = useState<number | null>();
-    const [generic25, setGeneric25] = useState<number | null>();
-    const [generic35, setGeneric35] = useState<number | null>();
-    const [generic45, setGeneric45] = useState<number | null>();
-    const [generic55, setGeneric55] = useState<number | null>();
-    const [generic65, setGeneric65] = useState<number | null>();
-    const [generic75, setGeneric75] = useState<number | null>();
-    const [generic85, setGeneric85] = useState<number | null>();
-    const [generic95, setGeneric95] = useState<number | null>();
-    const [generic105, setGeneric105] = useState<number | null>();
-    const [generic115, setGeneric115] = useState<number | null>();
-    const [generic125, setGeneric125] = useState<number | null>();
-    const [generic135, setGeneric135] = useState<number | null>();
-    const [generic145, setGeneric145] = useState<number | null>();
-    const [generic155, setGeneric155] = useState<number | null>();
-
-    //column 1 change handlers
-    const changeGeneric11 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric11 = parseInt(event.target.value);
-        setGeneric11(numGeneric11);
-    };
-
-    const changeGeneric21 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric21 = parseInt(event.target.value);
-        setGeneric21(numGeneric21);
-    };
-
-    const changeGeneric31 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric31 = parseInt(event.target.value);
-        setGeneric31(numGeneric31);
-    };
-
-    const changeGeneric41 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric41 = parseInt(event.target.value);
-        setGeneric41(numGeneric41);
-    };
-
-    const changeGeneric51 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric51 = parseInt(event.target.value);
-        setGeneric51(numGeneric51);
-    };
-
-    const changeGeneric61 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric61 = parseInt(event.target.value);
-        setGeneric61(numGeneric61);
-    };
-
-    const changeGeneric71 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric71 = parseInt(event.target.value);
-        setGeneric71(numGeneric71);
-    };
-
-    const changeGeneric81 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric81 = parseInt(event.target.value);
-        setGeneric81(numGeneric81);
-    };
-
-    const changeGeneric91 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric91 = parseInt(event.target.value);
-        setGeneric91(numGeneric91);
-    };
-
-    const changeGeneric101 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric101 = parseInt(event.target.value);
-        setGeneric101(numGeneric101);
-    };
-
-    const changeGeneric111 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric111 = parseInt(event.target.value);
-        setGeneric111(numGeneric111);
-    };
-
-    const changeGeneric121 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric121 = parseInt(event.target.value);
-        setGeneric121(numGeneric121);
-    };
-
-    const changeGeneric131 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric131 = parseInt(event.target.value);
-        setGeneric131(numGeneric131);
-    };
-
-    const changeGeneric141 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric141 = parseInt(event.target.value);
-        setGeneric141(numGeneric141);
-    };
-
-    const changeGeneric151 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric151 = parseInt(event.target.value);
-        setGeneric151(numGeneric151);
-    };
-
-    //column 2 change handlers
-    const changeGeneric12 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric12 = parseInt(event.target.value);
-        setGeneric12(numGeneric12);
-    };
-
-    const changeGeneric22 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric22 = parseInt(event.target.value);
-        setGeneric22(numGeneric22);
-    };
-
-    const changeGeneric32 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric32 = parseInt(event.target.value);
-        setGeneric32(numGeneric32);
-    };
-
-    const changeGeneric42 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric42 = parseInt(event.target.value);
-        setGeneric42(numGeneric42);
-    };
-
-    const changeGeneric52 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric52 = parseInt(event.target.value);
-        setGeneric52(numGeneric52);
-    };
-
-    const changeGeneric62 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric62 = parseInt(event.target.value);
-        setGeneric62(numGeneric62);
-    };
-
-    const changeGeneric72 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric72 = parseInt(event.target.value);
-        setGeneric72(numGeneric72);
-    };
-
-    const changeGeneric82 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric82 = parseInt(event.target.value);
-        setGeneric82(numGeneric82);
-    };
-
-    const changeGeneric92 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric92 = parseInt(event.target.value);
-        setGeneric92(numGeneric92);
-    };
-
-    const changeGeneric102 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric102 = parseInt(event.target.value);
-        setGeneric102(numGeneric102);
-    };
-
-    const changeGeneric112 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric112 = parseInt(event.target.value);
-        setGeneric112(numGeneric112);
-    };
-
-    const changeGeneric122 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric122 = parseInt(event.target.value);
-        setGeneric122(numGeneric122);
-    };
-
-    const changeGeneric132 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric132 = parseInt(event.target.value);
-        setGeneric132(numGeneric132);
-    };
-
-    const changeGeneric142 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric142 = parseInt(event.target.value);
-        setGeneric142(numGeneric142);
-    };
-
-    const changeGeneric152 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric152 = parseInt(event.target.value);
-        setGeneric152(numGeneric152);
-    };
-
-    //column 3 change handlers
-    const changeGeneric13 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric13 = parseInt(event.target.value);
-        setGeneric13(numGeneric13);
-    };
-
-    const changeGeneric23 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric23 = parseInt(event.target.value);
-        setGeneric23(numGeneric23);
-    };
-
-    const changeGeneric33 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric33 = parseInt(event.target.value);
-        setGeneric33(numGeneric33);
-    };
-
-    const changeGeneric43 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric43 = parseInt(event.target.value);
-        setGeneric43(numGeneric43);
-    };
-
-    const changeGeneric53 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric53 = parseInt(event.target.value);
-        setGeneric53(numGeneric53);
-    };
-
-    const changeGeneric63 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric63 = parseInt(event.target.value);
-        setGeneric63(numGeneric63);
-    };
-
-    const changeGeneric73 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric73 = parseInt(event.target.value);
-        setGeneric73(numGeneric73);
-    };
-
-    const changeGeneric83 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric83 = parseInt(event.target.value);
-        setGeneric83(numGeneric83);
-    };
-
-    const changeGeneric93 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric93 = parseInt(event.target.value);
-        setGeneric93(numGeneric93);
-    };
-
-    const changeGeneric103 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric103 = parseInt(event.target.value);
-        setGeneric103(numGeneric103);
-    };
-
-    const changeGeneric113 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric113 = parseInt(event.target.value);
-        setGeneric113(numGeneric113);
-    };
-
-    const changeGeneric123 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric123 = parseInt(event.target.value);
-        setGeneric123(numGeneric123);
-    };
-
-    const changeGeneric133 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric133 = parseInt(event.target.value);
-        setGeneric133(numGeneric133);
-    };
-
-    const changeGeneric143 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric143 = parseInt(event.target.value);
-        setGeneric143(numGeneric143);
-    };
-
-    const changeGeneric153 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric153 = parseInt(event.target.value);
-        setGeneric153(numGeneric153);
-    };
-
-    //column 4 change handlers
-    const changeGeneric14 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric14 = parseInt(event.target.value);
-        setGeneric14(numGeneric14);
-    };
-
-    const changeGeneric24 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric24 = parseInt(event.target.value);
-        setGeneric24(numGeneric24);
-    };
-
-    const changeGeneric34 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric34 = parseInt(event.target.value);
-        setGeneric34(numGeneric34);
-    };
-
-    const changeGeneric44 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric44 = parseInt(event.target.value);
-        setGeneric44(numGeneric44);
-    };
-
-    const changeGeneric54 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric54 = parseInt(event.target.value);
-        setGeneric54(numGeneric54);
-    };
-
-    const changeGeneric64 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric64 = parseInt(event.target.value);
-        setGeneric64(numGeneric64);
-    };
-
-    const changeGeneric74 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric74 = parseInt(event.target.value);
-        setGeneric74(numGeneric74);
-    };
-
-    const changeGeneric84 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric84 = parseInt(event.target.value);
-        setGeneric84(numGeneric84);
-    };
-
-    const changeGeneric94 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric94 = parseInt(event.target.value);
-        setGeneric94(numGeneric94);
-    };
-
-    const changeGeneric104 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric104 = parseInt(event.target.value);
-        setGeneric104(numGeneric104);
-    };
-
-    const changeGeneric114 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric114 = parseInt(event.target.value);
-        setGeneric114(numGeneric114);
-    };
-
-    const changeGeneric124 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric124 = parseInt(event.target.value);
-        setGeneric124(numGeneric124);
-    };
-
-    const changeGeneric134 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric134 = parseInt(event.target.value);
-        setGeneric134(numGeneric134);
-    };
-
-    const changeGeneric144 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric144 = parseInt(event.target.value);
-        setGeneric144(numGeneric144);
-    };
-
-    const changeGeneric154 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric154 = parseInt(event.target.value);
-        setGeneric154(numGeneric154);
-    };
-
-    //column 5 change handlers
-    const changeGeneric15 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric15 = parseInt(event.target.value);
-        setGeneric15(numGeneric15);
-    };
-
-    const changeGeneric25 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric25 = parseInt(event.target.value);
-        setGeneric25(numGeneric25);
-    };
-
-    const changeGeneric35 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric35 = parseInt(event.target.value);
-        setGeneric35(numGeneric35);
-    };
-
-    const changeGeneric45 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric45 = parseInt(event.target.value);
-        setGeneric45(numGeneric45);
-    };
-
-    const changeGeneric55 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric55 = parseInt(event.target.value);
-        setGeneric55(numGeneric55);
-    };
-
-    const changeGeneric65 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric65 = parseInt(event.target.value);
-        setGeneric65(numGeneric65);
-    };
-
-    const changeGeneric75 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric75 = parseInt(event.target.value);
-        setGeneric75(numGeneric75);
-    };
-
-    const changeGeneric85 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric85 = parseInt(event.target.value);
-        setGeneric85(numGeneric85);
-    };
-
-    const changeGeneric95 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric95 = parseInt(event.target.value);
-        setGeneric95(numGeneric95);
-    };
-
-    const changeGeneric105 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric105 = parseInt(event.target.value);
-        setGeneric105(numGeneric105);
-    };
-
-    const changeGeneric115 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric115 = parseInt(event.target.value);
-        setGeneric115(numGeneric115);
-    };
-
-    const changeGeneric125 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric125 = parseInt(event.target.value);
-        setGeneric125(numGeneric125);
-    };
-
-    const changeGeneric135 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric135 = parseInt(event.target.value);
-        setGeneric135(numGeneric135);
-    };
-
-    const changeGeneric145 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric145 = parseInt(event.target.value);
-        setGeneric145(numGeneric145);
-    };
-
-    const changeGeneric155 = (event: ChangeEvent<HTMLInputElement>) => {
-        const numGeneric155 = parseInt(event.target.value);
-        setGeneric155(numGeneric155);
-    };
-
-    const readGeneric = () => {
-        const columnGeneric1 = [
-            generic11,
-            generic21,
-            generic31,
-            generic41,
-            generic51,
-            generic61,
-            generic71,
-            generic81,
-            generic91,
-            generic101,
-            generic111,
-            generic121,
-            generic131,
-            generic141,
-            generic151
-        ];
-        const columnGeneric2 = [
-            generic12,
-            generic22,
-            generic32,
-            generic42,
-            generic52,
-            generic62,
-            generic72,
-            generic82,
-            generic92,
-            generic102,
-            generic112,
-            generic122,
-            generic132,
-            generic142,
-            generic152
-        ];
-        const columnGeneric3 = [
-            generic13,
-            generic23,
-            generic33,
-            generic43,
-            generic53,
-            generic63,
-            generic73,
-            generic83,
-            generic93,
-            generic103,
-            generic113,
-            generic123,
-            generic133,
-            generic143,
-            generic153
-        ];
-        const columnGeneric4 = [
-            generic14,
-            generic24,
-            generic34,
-            generic44,
-            generic54,
-            generic64,
-            generic74,
-            generic84,
-            generic94,
-            generic104,
-            generic114,
-            generic124,
-            generic134,
-            generic144,
-            generic154
-        ];
-        const columnGeneric5 = [
-            generic15,
-            generic25,
-            generic35,
-            generic45,
-            generic55,
-            generic65,
-            generic75,
-            generic85,
-            generic95,
-            generic105,
-            generic115,
-            generic125,
-            generic135,
-            generic145,
-            generic155
-        ];
-
-        return [columnGeneric1, columnGeneric2, columnGeneric3, columnGeneric4, columnGeneric5];
-    };
+    // const [generic15, setGeneric15] = useState<number | null>();
+    // const [generic25, setGeneric25] = useState<number | null>();
+    // const [generic35, setGeneric35] = useState<number | null>();
+    // const [generic45, setGeneric45] = useState<number | null>();
+    // const [generic55, setGeneric55] = useState<number | null>();
+    // const [generic65, setGeneric65] = useState<number | null>();
+    // const [generic75, setGeneric75] = useState<number | null>();
+    // const [generic85, setGeneric85] = useState<number | null>();
+    // const [generic95, setGeneric95] = useState<number | null>();
+    // const [generic105, setGeneric105] = useState<number | null>();
+    // const [generic115, setGeneric115] = useState<number | null>();
+    // const [generic125, setGeneric125] = useState<number | null>();
+    // const [generic135, setGeneric135] = useState<number | null>();
+    // const [generic145, setGeneric145] = useState<number | null>();
+    // const [generic155, setGeneric155] = useState<number | null>();
+
+    // //column 1 change handlers
+    // const changeGeneric11 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric11 = parseInt(event.target.value);
+    //     setGeneric11(numGeneric11);
+    // };
+
+    // const changeGeneric21 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric21 = parseInt(event.target.value);
+    //     setGeneric21(numGeneric21);
+    // };
+
+    // const changeGeneric31 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric31 = parseInt(event.target.value);
+    //     setGeneric31(numGeneric31);
+    // };
+
+    // const changeGeneric41 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric41 = parseInt(event.target.value);
+    //     setGeneric41(numGeneric41);
+    // };
+
+    // const changeGeneric51 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric51 = parseInt(event.target.value);
+    //     setGeneric51(numGeneric51);
+    // };
+
+    // const changeGeneric61 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric61 = parseInt(event.target.value);
+    //     setGeneric61(numGeneric61);
+    // };
+
+    // const changeGeneric71 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric71 = parseInt(event.target.value);
+    //     setGeneric71(numGeneric71);
+    // };
+
+    // const changeGeneric81 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric81 = parseInt(event.target.value);
+    //     setGeneric81(numGeneric81);
+    // };
+
+    // const changeGeneric91 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric91 = parseInt(event.target.value);
+    //     setGeneric91(numGeneric91);
+    // };
+
+    // const changeGeneric101 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric101 = parseInt(event.target.value);
+    //     setGeneric101(numGeneric101);
+    // };
+
+    // const changeGeneric111 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric111 = parseInt(event.target.value);
+    //     setGeneric111(numGeneric111);
+    // };
+
+    // const changeGeneric121 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric121 = parseInt(event.target.value);
+    //     setGeneric121(numGeneric121);
+    // };
+
+    // const changeGeneric131 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric131 = parseInt(event.target.value);
+    //     setGeneric131(numGeneric131);
+    // };
+
+    // const changeGeneric141 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric141 = parseInt(event.target.value);
+    //     setGeneric141(numGeneric141);
+    // };
+
+    // const changeGeneric151 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric151 = parseInt(event.target.value);
+    //     setGeneric151(numGeneric151);
+    // };
+
+    // //column 2 change handlers
+    // const changeGeneric12 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric12 = parseInt(event.target.value);
+    //     setGeneric12(numGeneric12);
+    // };
+
+    // const changeGeneric22 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric22 = parseInt(event.target.value);
+    //     setGeneric22(numGeneric22);
+    // };
+
+    // const changeGeneric32 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric32 = parseInt(event.target.value);
+    //     setGeneric32(numGeneric32);
+    // };
+
+    // const changeGeneric42 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric42 = parseInt(event.target.value);
+    //     setGeneric42(numGeneric42);
+    // };
+
+    // const changeGeneric52 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric52 = parseInt(event.target.value);
+    //     setGeneric52(numGeneric52);
+    // };
+
+    // const changeGeneric62 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric62 = parseInt(event.target.value);
+    //     setGeneric62(numGeneric62);
+    // };
+
+    // const changeGeneric72 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric72 = parseInt(event.target.value);
+    //     setGeneric72(numGeneric72);
+    // };
+
+    // const changeGeneric82 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric82 = parseInt(event.target.value);
+    //     setGeneric82(numGeneric82);
+    // };
+
+    // const changeGeneric92 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric92 = parseInt(event.target.value);
+    //     setGeneric92(numGeneric92);
+    // };
+
+    // const changeGeneric102 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric102 = parseInt(event.target.value);
+    //     setGeneric102(numGeneric102);
+    // };
+
+    // const changeGeneric112 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric112 = parseInt(event.target.value);
+    //     setGeneric112(numGeneric112);
+    // };
+
+    // const changeGeneric122 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric122 = parseInt(event.target.value);
+    //     setGeneric122(numGeneric122);
+    // };
+
+    // const changeGeneric132 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric132 = parseInt(event.target.value);
+    //     setGeneric132(numGeneric132);
+    // };
+
+    // const changeGeneric142 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric142 = parseInt(event.target.value);
+    //     setGeneric142(numGeneric142);
+    // };
+
+    // const changeGeneric152 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric152 = parseInt(event.target.value);
+    //     setGeneric152(numGeneric152);
+    // };
+
+    // //column 3 change handlers
+    // const changeGeneric13 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric13 = parseInt(event.target.value);
+    //     setGeneric13(numGeneric13);
+    // };
+
+    // const changeGeneric23 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric23 = parseInt(event.target.value);
+    //     setGeneric23(numGeneric23);
+    // };
+
+    // const changeGeneric33 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric33 = parseInt(event.target.value);
+    //     setGeneric33(numGeneric33);
+    // };
+
+    // const changeGeneric43 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric43 = parseInt(event.target.value);
+    //     setGeneric43(numGeneric43);
+    // };
+
+    // const changeGeneric53 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric53 = parseInt(event.target.value);
+    //     setGeneric53(numGeneric53);
+    // };
+
+    // const changeGeneric63 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric63 = parseInt(event.target.value);
+    //     setGeneric63(numGeneric63);
+    // };
+
+    // const changeGeneric73 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric73 = parseInt(event.target.value);
+    //     setGeneric73(numGeneric73);
+    // };
+
+    // const changeGeneric83 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric83 = parseInt(event.target.value);
+    //     setGeneric83(numGeneric83);
+    // };
+
+    // const changeGeneric93 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric93 = parseInt(event.target.value);
+    //     setGeneric93(numGeneric93);
+    // };
+
+    // const changeGeneric103 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric103 = parseInt(event.target.value);
+    //     setGeneric103(numGeneric103);
+    // };
+
+    // const changeGeneric113 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric113 = parseInt(event.target.value);
+    //     setGeneric113(numGeneric113);
+    // };
+
+    // const changeGeneric123 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric123 = parseInt(event.target.value);
+    //     setGeneric123(numGeneric123);
+    // };
+
+    // const changeGeneric133 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric133 = parseInt(event.target.value);
+    //     setGeneric133(numGeneric133);
+    // };
+
+    // const changeGeneric143 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric143 = parseInt(event.target.value);
+    //     setGeneric143(numGeneric143);
+    // };
+
+    // const changeGeneric153 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric153 = parseInt(event.target.value);
+    //     setGeneric153(numGeneric153);
+    // };
+
+    // //column 4 change handlers
+    // const changeGeneric14 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric14 = parseInt(event.target.value);
+    //     setGeneric14(numGeneric14);
+    // };
+
+    // const changeGeneric24 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric24 = parseInt(event.target.value);
+    //     setGeneric24(numGeneric24);
+    // };
+
+    // const changeGeneric34 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric34 = parseInt(event.target.value);
+    //     setGeneric34(numGeneric34);
+    // };
+
+    // const changeGeneric44 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric44 = parseInt(event.target.value);
+    //     setGeneric44(numGeneric44);
+    // };
+
+    // const changeGeneric54 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric54 = parseInt(event.target.value);
+    //     setGeneric54(numGeneric54);
+    // };
+
+    // const changeGeneric64 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric64 = parseInt(event.target.value);
+    //     setGeneric64(numGeneric64);
+    // };
+
+    // const changeGeneric74 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric74 = parseInt(event.target.value);
+    //     setGeneric74(numGeneric74);
+    // };
+
+    // const changeGeneric84 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric84 = parseInt(event.target.value);
+    //     setGeneric84(numGeneric84);
+    // };
+
+    // const changeGeneric94 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric94 = parseInt(event.target.value);
+    //     setGeneric94(numGeneric94);
+    // };
+
+    // const changeGeneric104 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric104 = parseInt(event.target.value);
+    //     setGeneric104(numGeneric104);
+    // };
+
+    // const changeGeneric114 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric114 = parseInt(event.target.value);
+    //     setGeneric114(numGeneric114);
+    // };
+
+    // const changeGeneric124 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric124 = parseInt(event.target.value);
+    //     setGeneric124(numGeneric124);
+    // };
+
+    // const changeGeneric134 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric134 = parseInt(event.target.value);
+    //     setGeneric134(numGeneric134);
+    // };
+
+    // const changeGeneric144 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric144 = parseInt(event.target.value);
+    //     setGeneric144(numGeneric144);
+    // };
+
+    // const changeGeneric154 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric154 = parseInt(event.target.value);
+    //     setGeneric154(numGeneric154);
+    // };
+
+    // //column 5 change handlers
+    // const changeGeneric15 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric15 = parseInt(event.target.value);
+    //     setGeneric15(numGeneric15);
+    // };
+
+    // const changeGeneric25 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric25 = parseInt(event.target.value);
+    //     setGeneric25(numGeneric25);
+    // };
+
+    // const changeGeneric35 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric35 = parseInt(event.target.value);
+    //     setGeneric35(numGeneric35);
+    // };
+
+    // const changeGeneric45 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric45 = parseInt(event.target.value);
+    //     setGeneric45(numGeneric45);
+    // };
+
+    // const changeGeneric55 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric55 = parseInt(event.target.value);
+    //     setGeneric55(numGeneric55);
+    // };
+
+    // const changeGeneric65 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric65 = parseInt(event.target.value);
+    //     setGeneric65(numGeneric65);
+    // };
+
+    // const changeGeneric75 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric75 = parseInt(event.target.value);
+    //     setGeneric75(numGeneric75);
+    // };
+
+    // const changeGeneric85 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric85 = parseInt(event.target.value);
+    //     setGeneric85(numGeneric85);
+    // };
+
+    // const changeGeneric95 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric95 = parseInt(event.target.value);
+    //     setGeneric95(numGeneric95);
+    // };
+
+    // const changeGeneric105 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric105 = parseInt(event.target.value);
+    //     setGeneric105(numGeneric105);
+    // };
+
+    // const changeGeneric115 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric115 = parseInt(event.target.value);
+    //     setGeneric115(numGeneric115);
+    // };
+
+    // const changeGeneric125 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric125 = parseInt(event.target.value);
+    //     setGeneric125(numGeneric125);
+    // };
+
+    // const changeGeneric135 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric135 = parseInt(event.target.value);
+    //     setGeneric135(numGeneric135);
+    // };
+
+    // const changeGeneric145 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric145 = parseInt(event.target.value);
+    //     setGeneric145(numGeneric145);
+    // };
+
+    // const changeGeneric155 = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const numGeneric155 = parseInt(event.target.value);
+    //     setGeneric155(numGeneric155);
+    // };
+
+    // const readGeneric = () => {
+    //     const columnGeneric1 = [
+    //         generic11,
+    //         generic21,
+    //         generic31,
+    //         generic41,
+    //         generic51,
+    //         generic61,
+    //         generic71,
+    //         generic81,
+    //         generic91,
+    //         generic101,
+    //         generic111,
+    //         generic121,
+    //         generic131,
+    //         generic141,
+    //         generic151
+    //     ];
+    //     const columnGeneric2 = [
+    //         generic12,
+    //         generic22,
+    //         generic32,
+    //         generic42,
+    //         generic52,
+    //         generic62,
+    //         generic72,
+    //         generic82,
+    //         generic92,
+    //         generic102,
+    //         generic112,
+    //         generic122,
+    //         generic132,
+    //         generic142,
+    //         generic152
+    //     ];
+    //     const columnGeneric3 = [
+    //         generic13,
+    //         generic23,
+    //         generic33,
+    //         generic43,
+    //         generic53,
+    //         generic63,
+    //         generic73,
+    //         generic83,
+    //         generic93,
+    //         generic103,
+    //         generic113,
+    //         generic123,
+    //         generic133,
+    //         generic143,
+    //         generic153
+    //     ];
+    //     const columnGeneric4 = [
+    //         generic14,
+    //         generic24,
+    //         generic34,
+    //         generic44,
+    //         generic54,
+    //         generic64,
+    //         generic74,
+    //         generic84,
+    //         generic94,
+    //         generic104,
+    //         generic114,
+    //         generic124,
+    //         generic134,
+    //         generic144,
+    //         generic154
+    //     ];
+    //     const columnGeneric5 = [
+    //         generic15,
+    //         generic25,
+    //         generic35,
+    //         generic45,
+    //         generic55,
+    //         generic65,
+    //         generic75,
+    //         generic85,
+    //         generic95,
+    //         generic105,
+    //         generic115,
+    //         generic125,
+    //         generic135,
+    //         generic145,
+    //         generic155
+    //     ];
+
+    //     return [columnGeneric1, columnGeneric2, columnGeneric3, columnGeneric4, columnGeneric5];
+    // };
 
     // ********* MATRIX **********
 
@@ -2514,7 +2602,7 @@ const HorizontalCheckV2 = () => {
     const doHorisontalCheck = () => {
         setCoincidencesToZero();
 
-        let genericColumnsArr = readGeneric();
+        // let genericColumnsArr = readGeneric();
         const generic1Arr = genericColumnsArr[0];
         const generic2Arr = genericColumnsArr[1];
         const generic3Arr = genericColumnsArr[2];
@@ -3911,14 +3999,35 @@ const HorizontalCheckV2 = () => {
             <p className="component-title">Horizontal Checks</p>
             <div className="generic-matrix-wrapper">
                 <div className="column-position">
-                    <div>P</div>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
+                    <div className="column-position-item">P</div>
+                    <div className="column-position-item">1</div>
+                    <div className="column-position-item">2</div>
+                    <div className="column-position-item">3</div>
+                    <div className="column-position-item">4</div>
+                    <div className="column-position-item">5</div>
                 </div>
-                <div className="generic-first-row generic-row">
+                <div className="map-wrapper">
+                    <div className="row-position">
+                        {genericColumnsArr[0].map((element, index) => {
+                            return <div className="row-position-item">{index + 1}</div>;
+                        })}
+                    </div>
+                    {genericColumnsArr.map((column, index) => {
+                        return (
+                            <div key={index} className="generic-column">
+                                {column.map((element, item) => {
+                                    return (
+                                        <div className="generic-item" key={item}>
+                                            {element}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* <div className="generic-first-row generic-row">
                     <div className="row-position">1</div>
                     <div className="row-1">
                         <input className="generic-1-1" id="generic-1-1" name="generic-1-1" placeholder={'1-1'} onChange={changeGeneric11} />
@@ -4067,7 +4176,7 @@ const HorizontalCheckV2 = () => {
                         <input className="generic-15-4" id="generic-15-4" name="generic-15-4" placeholder={'15-4'} onChange={changeGeneric154} />
                         <input className="generic-15-5" id="generic-15-5" name="generic-15-5" placeholder={'15-5'} onChange={changeGeneric155} />
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="matrix-wrapper">
                 <div className="column-position">
