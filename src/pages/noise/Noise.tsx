@@ -1234,7 +1234,7 @@ const Noise = () => {
     };
 
     // noise level const
-    const noiseLevel = 0.024;
+    const noiseLevel = 0.098;
 
     //noise row 1
     const [noise1x1, setNoise1x1] = useState<number>();
@@ -6829,6 +6829,7 @@ const Noise = () => {
     return (
         <div className="noise-wrapper">
             <p>Noise</p>
+            <p>Current noise level: {noiseLevel}</p>
             <div className="random-wrapper">
                 <div className="random-row column-numbers">
                     <div className="random-number column-number">Pos</div>

@@ -4,6 +4,117 @@ import _ from 'lodash';
 import './Cycle.css';
 
 const Cycle = () => {
+    const getMatrixData = () => {
+        //matrix rows
+        const matrix1Str = localStorage.getItem('matrix1Arr');
+        const matrix2Str = localStorage.getItem('matrix2Arr');
+        const matrix3Str = localStorage.getItem('matrix3Arr');
+        const matrix4Str = localStorage.getItem('matrix4Arr');
+        const matrix5Str = localStorage.getItem('matrix5Arr');
+        const matrix6Str = localStorage.getItem('matrix6Arr');
+        const matrix7Str = localStorage.getItem('matrix7Arr');
+        const matrix8Str = localStorage.getItem('matrix8Arr');
+        const matrix9Str = localStorage.getItem('matrix9Arr');
+
+        //horizontal check results
+        const horizontalResultRow1Str = localStorage.getItem('horizontalResultRow1');
+        const horizontalResultRow2Str = localStorage.getItem('horizontalResultRow2');
+        const horizontalResultRow3Str = localStorage.getItem('horizontalResultRow3');
+        const horizontalResultRow4Str = localStorage.getItem('horizontalResultRow4');
+        const horizontalResultRow5Str = localStorage.getItem('horizontalResultRow5');
+        const horizontalResultRow6Str = localStorage.getItem('horizontalResultRow6');
+        const horizontalResultRow7Str = localStorage.getItem('horizontalResultRow7');
+        const horizontalResultRow8Str = localStorage.getItem('horizontalResultRow8');
+        const horizontalResultRow9Str = localStorage.getItem('horizontalResultRow9');
+
+        //vertical check results
+        const verticalResultRow10Str = localStorage.getItem('verticalResultRow10');
+        const verticalResultRow11Str = localStorage.getItem('verticalResultRow11');
+        const verticalResultRow12Str = localStorage.getItem('verticalResultRow12');
+        const verticalResultRow13Str = localStorage.getItem('verticalResultRow13');
+
+        if (
+            matrix1Str !== null &&
+            matrix2Str !== null &&
+            matrix3Str !== null &&
+            matrix4Str !== null &&
+            matrix5Str !== null &&
+            matrix6Str !== null &&
+            matrix7Str !== null &&
+            matrix8Str !== null &&
+            matrix9Str !== null &&
+            horizontalResultRow1Str !== null &&
+            horizontalResultRow2Str !== null &&
+            horizontalResultRow3Str !== null &&
+            horizontalResultRow4Str !== null &&
+            horizontalResultRow5Str !== null &&
+            horizontalResultRow6Str !== null &&
+            horizontalResultRow7Str !== null &&
+            horizontalResultRow8Str !== null &&
+            horizontalResultRow9Str !== null &&
+            verticalResultRow10Str !== null &&
+            verticalResultRow11Str !== null &&
+            verticalResultRow12Str !== null &&
+            verticalResultRow13Str !== null
+        ) {
+            //convert matrix rows to array of digits
+            const matrixRow1 = Array.from(matrix1Str.replaceAll(',', ''), Number);
+            const matrixRow2 = Array.from(matrix2Str.replaceAll(',', ''), Number);
+            const matrixRow3 = Array.from(matrix3Str.replaceAll(',', ''), Number);
+            const matrixRow4 = Array.from(matrix4Str.replaceAll(',', ''), Number);
+            const matrixRow5 = Array.from(matrix5Str.replaceAll(',', ''), Number);
+            const matrixRow6 = Array.from(matrix6Str.replaceAll(',', ''), Number);
+            const matrixRow7 = Array.from(matrix7Str.replaceAll(',', ''), Number);
+            const matrixRow8 = Array.from(matrix8Str.replaceAll(',', ''), Number);
+            const matrixRow9 = Array.from(matrix9Str.replaceAll(',', ''), Number);
+
+            //convert hroizontal checks rows to array of digits
+            const horizontalResultRow1 = Array.from(horizontalResultRow1Str.replaceAll(',', ''), Number);
+            const horizontalResultRow2 = Array.from(horizontalResultRow2Str.replaceAll(',', ''), Number);
+            const horizontalResultRow3 = Array.from(horizontalResultRow3Str.replaceAll(',', ''), Number);
+            const horizontalResultRow4 = Array.from(horizontalResultRow4Str.replaceAll(',', ''), Number);
+            const horizontalResultRow5 = Array.from(horizontalResultRow5Str.replaceAll(',', ''), Number);
+            const horizontalResultRow6 = Array.from(horizontalResultRow6Str.replaceAll(',', ''), Number);
+            const horizontalResultRow7 = Array.from(horizontalResultRow7Str.replaceAll(',', ''), Number);
+            const horizontalResultRow8 = Array.from(horizontalResultRow8Str.replaceAll(',', ''), Number);
+            const horizontalResultRow9 = Array.from(horizontalResultRow9Str.replaceAll(',', ''), Number);
+
+            const messageRow1 = [...matrixRow1, ...horizontalResultRow1];
+            const messageRow2 = [...matrixRow2, ...horizontalResultRow2];
+            const messageRow3 = [...matrixRow3, ...horizontalResultRow3];
+            const messageRow4 = [...matrixRow4, ...horizontalResultRow4];
+            const messageRow5 = [...matrixRow5, ...horizontalResultRow5];
+            const messageRow6 = [...matrixRow6, ...horizontalResultRow6];
+            const messageRow7 = [...matrixRow7, ...horizontalResultRow7];
+            const messageRow8 = [...matrixRow8, ...horizontalResultRow8];
+            const messageRow9 = [...matrixRow9, ...horizontalResultRow9];
+
+            //convert vertical checks rows to array of digits
+            const verticalResultRow10 = Array.from(verticalResultRow10Str.replaceAll(',', ''), Number);
+            const verticalResultRow11 = Array.from(verticalResultRow11Str.replaceAll(',', ''), Number);
+            const verticalResultRow12 = Array.from(verticalResultRow12Str.replaceAll(',', ''), Number);
+            const verticalResultRow13 = Array.from(verticalResultRow13Str.replaceAll(',', ''), Number);
+
+            const matrixColumns = [
+                messageRow1,
+                messageRow2,
+                messageRow3,
+                messageRow4,
+                messageRow5,
+                messageRow6,
+                messageRow7,
+                messageRow8,
+                messageRow9,
+                verticalResultRow10,
+                verticalResultRow11,
+                verticalResultRow12,
+                verticalResultRow13
+            ];
+
+            return matrixColumns;
+        }
+    };
+
     const [horizontalDecodeResult, setHorizontalDecodeResult] = useState<number[][]>([]);
 
     const [targetMatrix, setTargetMatrix] = useState<number[][]>([]);
@@ -327,7 +438,6 @@ const Cycle = () => {
     //     }
     // };
 
-    // console.log('target matrix: ', targetMatrix);
     // console.log('vertical target matrix: ', verticalTargetMatrix);
     // console.log('parity vertical check results array: ', verticalDecodeResult);
     const emptyHorizontal = [0, 0, 0, 0, 0];
@@ -375,6 +485,17 @@ const Cycle = () => {
         }
     };
 
+    const compareMessageAndResult = () => {
+        const matrixBeforeNoise = getMatrixData();
+        const isMessageEqualToDecode = _.isEqual(matrixBeforeNoise, targetMatrix);
+        console.log('matrix before noise: ', matrixBeforeNoise);
+        console.log('target matrix: ', targetMatrix);
+
+        console.log(isMessageEqualToDecode);
+        const alertMessage = isMessageEqualToDecode ? 'Message is equal to decoding result' : 'Messge is NOT equal to decode result';
+        window.alert(alertMessage);
+    };
+
     return (
         <div className="some-cycle">
             <div className="buttons-container">
@@ -395,12 +516,12 @@ const Cycle = () => {
                     <button onClick={fixErrorsVertical}>Fix errors Vertical</button> */}
                     {/* <button onClick={callTransposeBack}>Transpose back</button> */}
                 </div>
-                {/* <div className="do-in-one">
-                    <p>Do whole decoding in one click</p>
-                    <button id="do-in-one" onClick={final}>
-                        Do in one click
+                <div className="do-in-one">
+                    <button id="do-in-one" onClick={readNoiseMatrix}>
+                        Get new data
                     </button>
-                </div> */}
+                    <button onClick={compareMessageAndResult}>Compare message and decoding result</button>
+                </div>
             </div>
             {isMatrixReachable && (
                 <div className="cycle-wrapper">
